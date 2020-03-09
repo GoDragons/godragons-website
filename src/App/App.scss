@@ -1,0 +1,12 @@
+@import "../variables";
+
+* {
+  box-sizing: border-box;
+}
+
+.boxed-layout {
+  max-width: $max-page-width;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
