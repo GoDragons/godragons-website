@@ -1,0 +1,25 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+  aws-static-site-deploy: realself/aws-static-site-deploy@1.0.0
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm run build
+
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test
+  # test_env:
+  #   jobs:
+  #     - aws-static-site-deploy/copy-site:
+  #         from: ENV_TEST_AWS_ECR_ACCOUNT_URL
+  #         to: ENV_TEST_AWS_ECR_ACCOUNT_URL
+  #         distribution-id: ENV_TEST_AWS_ECR_ACCOUNT_URL

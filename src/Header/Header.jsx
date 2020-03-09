@@ -12,6 +12,7 @@ function Header() {
             <img
               className="logo"
               src="https://godragons-website-assets.s3.eu-west-2.amazonaws.com/godragons_logo_white_text_low_res.png"
+              alt="godragons logo"
             />
           </Link>
         </div>
