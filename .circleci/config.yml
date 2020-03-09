@@ -13,6 +13,8 @@ jobs:
             - run: npm install
             - run: npm run build
             - aws-static-site-deploy/copy-site:
+                access-key: AWS_ACCESS_KEY_ID
+                secret-key: AWS_SECRET_ACCESS_KEY
                 from: "./build"
                 to: S3_BUCKET_DEV
                 distribution-id: CLOUDFRONT_DISTRIBUTION_ID_DEV
