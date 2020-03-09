@@ -19,6 +19,7 @@ jobs:
             #     to: S3_BUCKET_DEV
             #     distribution-id: CLOUDFRONT_DISTRIBUTION_ID_DEV
             - aws-s3/copy:
+                arguments: "--recursive"
                 from: ./build
                 to: "s3://dev.godragons.com"
 
