@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@1.1.6
   aws-static-site-deploy: realself/aws-static-site-deploy@1.0.0
 jobs:
-  build-and-test:
+  dev:
     executor:
       name: node/default
     steps:
@@ -12,15 +12,12 @@ jobs:
           steps:
             - run: npm install
             - run: npm run build
+            - aws-static-site-deploy/copy-site:
+                from: "./build"
+                to: S3_BUCKET_DEV
+                distribution-id: CLOUDFRONT_DISTRIBUTION_ID_DEV
 
 workflows:
-  build-and-test:
+  dev:
     jobs:
-      - build-and-test
-  # test_env:
-  #   jobs:
-  #     - aws-static-site-deploy/copy-site:
-  #         from: ENV_TEST_AWS_ECR_ACCOUNT_URL
-  #         to: ENV_TEST_AWS_ECR_ACCOUNT_URL
-  #         distribution-id: ENV_TEST_AWS_ECR_ACCOUNT_URL
-  # asdgsdfg
+      - dev
