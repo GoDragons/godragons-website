@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
-  aws-static-site-deploy: realself/aws-static-site-deploy@1.0.0
+  aws-s3: circleci/aws-s3@1.0.15
 jobs:
   dev:
     executor:
@@ -12,12 +12,15 @@ jobs:
           steps:
             - run: npm install
             - run: npm run build
-            - aws-static-site-deploy/copy-site:
-                access-key: AWS_ACCESS_KEY_ID
-                secret-key: AWS_SECRET_ACCESS_KEY
-                from: "./build"
-                to: S3_BUCKET_DEV
-                distribution-id: CLOUDFRONT_DISTRIBUTION_ID_DEV
+            # - aws-static-site-deploy/copy-site:
+            #     access-key: AWS_ACCESS_KEY_ID
+            #     secret-key: AWS_SECRET_ACCESS_KEY
+            #     from: "./build"
+            #     to: S3_BUCKET_DEV
+            #     distribution-id: CLOUDFRONT_DISTRIBUTION_ID_DEV
+            - aws-s3/copy:
+                from: ./build
+                to: "s3://dev.godragons.com"
 
 workflows:
   dev:
