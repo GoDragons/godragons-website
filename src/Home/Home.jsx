@@ -47,7 +47,7 @@ function Home() {
                 <Img
                   className="img-responsive"
                   alt="People assembling building blocks"
-                  src="https://godragons-website-assets.s3.eu-west-2.amazonaws.com/optimised/godragons-building-blocks-min.webp"
+                  src="https://godragons-website-assets.s3.eu-west-2.amazonaws.com/optimised/godragons-building-blocks-min-min.webp"
                 />
               </Col>
               <Col sm={7}>
