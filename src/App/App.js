@@ -9,6 +9,7 @@ import Services from "../Services/Services";
 import Pricing from "../Pricing/Pricing";
 import Team from "../Team/Team";
 import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 import Blog from "../Blog/Blog";
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Blog />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

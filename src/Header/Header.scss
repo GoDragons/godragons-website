@@ -5,6 +5,11 @@ header {
   color: $white;
   padding: 10px 0;
 
+  .boxed-layout {
+    flex-direction: row;
+    align-items: center;
+  }
+
   .logo-container {
     width: $logo-desktop-width;
     display: flex;

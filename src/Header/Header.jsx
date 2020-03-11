@@ -3,10 +3,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
+import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
+
 function Header() {
   return (
     <header>
-      <div className="boxed-layout">
+      <BoxedLayout>
         <div className="logo-container">
           <Link to="/">
             <img
@@ -38,7 +40,7 @@ function Header() {
             </li>
           </ul>
         </nav>
-      </div>
+      </BoxedLayout>
     </header>
   );
 }

@@ -1,0 +1,35 @@
+@import "../../variables";
+
+button {
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-weight: 700;
+
+  margin-top: 20px;
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+
+  &.inline {
+    margin-top: 0;
+    display: inline-block;
+  }
+
+  &.primary {
+    border: 1px solid $color3;
+    background-color: $color3;
+    color: $white;
+  }
+
+  &.secondary {
+    background-color: $color2;
+    border: 1px solid $color2;
+    color: $white;
+  }
+
+  &.disabled {
+    background-color: $gray;
+    border: 1px solid $gray;
+    color: $color1;
+  }
+}
