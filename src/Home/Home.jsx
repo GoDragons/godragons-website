@@ -4,6 +4,7 @@ import { withRouter, Link } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
 import Button from "../Common/Button/Button";
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
+import ServiceItem from "./ServiceItem/ServiceItem";
 import "./Home.scss";
 
 function Home() {
@@ -88,7 +89,7 @@ function Home() {
                   title="Ideation"
                   body="Working with you to envision software solutions to problems"
                   link="/services#ideation"
-                  icon="fa-lightbulb"
+                  icon="far fa-lightbulb"
                 />
               </Col>
               <Col sm={4}></Col>
