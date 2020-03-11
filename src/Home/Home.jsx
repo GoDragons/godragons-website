@@ -7,6 +7,8 @@ import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
 import ServiceItem from "./ServiceItem/ServiceItem";
 import "./Home.scss";
 
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+
 function Home() {
   return (
     <div className="page-home">
@@ -89,7 +91,7 @@ function Home() {
                   title="Ideation"
                   body="Working with you to envision software solutions to problems"
                   link="/services#ideation"
-                  icon="far fa-lightbulb"
+                  icon={faLightbulb}
                 />
               </Col>
               <Col sm={4}></Col>

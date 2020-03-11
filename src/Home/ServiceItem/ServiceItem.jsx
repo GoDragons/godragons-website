@@ -4,7 +4,6 @@ import { withRouter, Link } from "react-router-dom";
 import cx from "classnames";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 import "./ServiceItem.scss";
 
@@ -14,7 +13,7 @@ function ServiceItem({ title, body, icon, link }) {
     <div className="service-item">
       <h4 className="title">{title}</h4>
       <div className="icon-container">
-        <FontAwesomeIcon icon={faCoffee} />
+        <FontAwesomeIcon icon={icon} />
       </div>
       <p>{body}</p>
       <Link to={link}>
