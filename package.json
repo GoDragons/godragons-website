@@ -14,6 +14,7 @@
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
+    "react-cool-img": "^1.0.15",
     "react-dom": "^16.13.0",
     "react-grid-system": "^6.2.4",
     "react-router-dom": "^5.1.2",

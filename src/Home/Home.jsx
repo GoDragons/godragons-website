@@ -2,6 +2,8 @@ import React from "react";
 
 import { withRouter, Link } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
+import Img from "react-cool-img";
+
 import Button from "../Common/Button/Button";
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
 import ServiceItem from "./ServiceItem/ServiceItem";
@@ -16,7 +18,7 @@ function Home() {
         <BoxedLayout>
           <Container>
             <Row align="center">
-              <Col sm={6}>
+              <Col sm={7}>
                 <h1>Solve real business problems with technology</h1>
                 <h4>
                   We turn problems into business opportunities with custom
@@ -26,12 +28,12 @@ function Home() {
                   <Button type="primary" label="Get in touch" />
                 </Link>
               </Col>
-              <Col sm={6}>
-                <img
+              <Col sm={5}>
+                <Img
                   className="img-responsive"
                   alt="GoDragons hero (people working on tech)"
-                  src="https://godragons-website-assets.s3.eu-west-2.amazonaws.com/godragons-hero.png"
-                ></img>
+                  src="https://godragons-website-assets.s3.eu-west-2.amazonaws.com/optimised/godragons-hero-min.webp"
+                />
               </Col>
             </Row>
           </Container>
@@ -42,11 +44,11 @@ function Home() {
           <Container>
             <Row align="center">
               <Col sm={5}>
-                <img
+                <Img
                   className="img-responsive"
-                  alt="GoDragons hero (people working on tech)"
-                  src="https://godragons-website-assets.s3.eu-west-2.amazonaws.com/godragons-building-blocks.png"
-                ></img>
+                  alt="People assembling building blocks"
+                  src="https://godragons-website-assets.s3.eu-west-2.amazonaws.com/optimised/godragons-building-blocks-min.webp"
+                />
               </Col>
               <Col sm={7}>
                 <h2>Who are we?</h2>
