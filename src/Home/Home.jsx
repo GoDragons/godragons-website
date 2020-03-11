@@ -83,7 +83,14 @@ function Home() {
               </Col>
             </Row>
             <Row>
-              <Col sm={4}></Col>
+              <Col sm={4}>
+                <ServiceItem
+                  title="Ideation"
+                  body="Working with you to envision software solutions to problems"
+                  link="/services#ideation"
+                  icon="fa-lightbulb"
+                />
+              </Col>
               <Col sm={4}></Col>
               <Col sm={4}></Col>
             </Row>
