@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.scss";
+import "../MyFontsWebfontsKit.css";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "../Header/Header";
