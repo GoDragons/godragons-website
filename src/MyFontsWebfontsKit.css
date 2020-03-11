@@ -73,6 +73,7 @@
     url("webfonts/3B30E1_E_0.woff") format("woff"),
     url("webfonts/3B30E1_E_0.ttf") format("truetype");
   font-weight: 100;
+  font-display: fallback;
 }
 
 @font-face {
@@ -83,6 +84,7 @@
     url("webfonts/3B30E1_8_0.woff") format("woff"),
     url("webfonts/3B30E1_8_0.ttf") format("truetype");
   font-weight: 300;
+  font-display: fallback;
 }
 
 @font-face {
@@ -93,6 +95,7 @@
     url("webfonts/3B30E1_C_0.woff") format("woff"),
     url("webfonts/3B30E1_C_0.ttf") format("truetype");
   font-weight: 600;
+  font-display: fallback;
 }
 
 @font-face {
@@ -103,6 +106,7 @@
     url("webfonts/3B30E1_A_0.woff") format("woff"),
     url("webfonts/3B30E1_A_0.ttf") format("truetype");
   font-weight: 400;
+  font-display: fallback;
 }
 
 @font-face {
@@ -113,6 +117,7 @@
     url("webfonts/3B30E1_0_0.woff") format("woff"),
     url("webfonts/3B30E1_0_0.ttf") format("truetype");
   font-weight: 900;
+  font-display: fallback;
 }
 
 @font-face {
@@ -123,4 +128,5 @@
     url("webfonts/3B30E1_2_0.woff") format("woff"),
     url("webfonts/3B30E1_2_0.ttf") format("truetype");
   font-weight: 1000;
+  font-display: fallback;
 }
