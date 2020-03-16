@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Ideation",
+    "icon": "lightbulb",
+    "description": "Working with you to envision software solutions to problems.",
+    "url": "https://godragons.com/services#consulting"
+  },
+  {
+    "name": "Cloud migration",
+    "icon": "cloud",
+    "description": "GoDragons can modernise your organisation by taking on-premise systems and migrating them to the cloud. This improves reliability, availability and reduces cost.",
+    "url": "https://godragons.com/services/#cloud-migration"
+  },
+  {
+    "name": "Prototyping",
+    "icon": "pencil-ruler",
+    "description": "Building the wrong thing is expensive. Creating a prototype to validate assumptions is a fast and cost-effective strategy.",
+    "url": "https://godragons.com/services/#prototyping"
+  },
+  {
+    "name": "Software development",
+    "icon": "laptop-code",
+    "description": "Build web and native apps, backend systems and entire platforms.",
+    "url": "https://godragons.com/services/#software-development"
+  },
+  {
+    "name": "Testing and reliability",
+    "icon": "bell",
+    "description": "Find peace of mind when making changes to your complex systems with our automated test suites protecting critical functionality.",
+    "url": "https://godragons.com/services/#testing-and-reliability"
+  },
+  {
+    "name": "System design",
+    "icon": "project-diagram",
+    "description": "If a picture is worth a thousand words, then a cloud-based systems architecture diagram is worth a million.",
+    "url": "https://godragons.com/services/#system-design"
+  }
+]

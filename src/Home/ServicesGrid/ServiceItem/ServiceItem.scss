@@ -1,0 +1,66 @@
+@import "../../../variables";
+
+.service-item {
+  margin-top: 30px;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 1.2rem;
+  min-height: 24rem;
+  position: relative;
+
+  .icon-container {
+    text-align: right;
+    position: absolute;
+    color: $white;
+    right: 10px;
+    top: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 50%;
+
+    .svg-inline--fa {
+      transform: scale(1.2);
+    }
+  }
+
+  .name {
+    font-family: Sen, Arial;
+    letter-spacing: -1px;
+    max-width: 130px;
+  }
+
+  .description {
+    color: $white;
+    opacity: 0.6;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  a {
+    color: $white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-family: Sen, Arial;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+  }
+
+  .svg-inline--fa {
+    position: relative;
+    top: 2px;
+    transform: scale(0.9);
+  }
+
+  .button-icon-right {
+    margin-left: 10px;
+  }
+}

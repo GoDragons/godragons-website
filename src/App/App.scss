@@ -2,12 +2,19 @@
 
 * {
   box-sizing: border-box;
-  font-family: Averta, Helvetica, Arial;
+  font-family: Karla, Arial;
+}
+
+h1, h2 {
+  font-family: Sen, Arial;
 }
 
 p {
   font-size: 1.5rem;
   color: $darkGray;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.6;
 }
 
 h1 {
