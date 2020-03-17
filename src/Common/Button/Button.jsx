@@ -5,7 +5,7 @@ import "./Button.scss";
 
 import cx from "classnames";
 
-function Button({ label, onClick, type, className, inline, social }) {
+function Button({ label, onClick, type, className, inline }) {
   const computedClassName = cx("button", className, {
     primary: type === "primary",
     secondary: type === "secondary",

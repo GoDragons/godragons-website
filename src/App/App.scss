@@ -3,15 +3,16 @@
 * {
   box-sizing: border-box;
   font-family: Karla, Arial;
+  color: $black;
 }
 
 h1,
 h2 {
-  font-family: Sen, Arial;
+  font-family: Poppins, Arial;
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: $darkGray;
   font-weight: 400;
   letter-spacing: -1px;
@@ -22,8 +23,9 @@ h1 {
   font-size: 3.3rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
+  letter-spacing: -3px;
 }
 
 h2 {
@@ -31,14 +33,15 @@ h2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  letter-spacing: -1px;
 }
 
 h3 {
   font-size: 1.8rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-weight: 700;
-  font-family: Sen, Arial;
+  font-weight: 600;
+  font-family: Poppins, Arial;
   margin: 0.6rem 0;
 }
 
@@ -46,14 +49,17 @@ h4 {
   font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h5 {
   text-transform: uppercase;
   color: $darkGray;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  // font-weight: bold;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: Poppins, Arial;
   margin: 0.2rem 0;
 }
 

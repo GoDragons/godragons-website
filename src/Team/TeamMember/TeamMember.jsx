@@ -7,7 +7,6 @@ import Separator from "../../Common/Separator/Separator";
 import "./TeamMember.scss";
 
 export default function TeamMember({ name, title, bio, linkedin, photo }) {
-  console.log("bio = ", bio);
   return (
     <Row className="team-member" align="center">
       <Col sm={7}>

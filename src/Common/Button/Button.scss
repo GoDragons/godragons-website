@@ -3,7 +3,7 @@
 button {
   padding: 10px 20px;
   border-radius: 3px;
-  font-weight: 700;
+  font-weight: 600;
 
   margin-top: 20px;
   display: block;
@@ -36,6 +36,8 @@ button {
   }
 
   &.linkedin {
+    font-family: Poppins, Arial;
+    font-weight: 600;
     background-color: #0e76a8;
     border-color: #0e76a8;
     color: $white;
