@@ -1,0 +1,75 @@
+@import "../variables";
+
+.page-blog {
+  .content {
+    width: 100%;
+  }
+
+  .section-title {
+    width: 100%;
+    text-align: center;
+    margin-top: -6.8rem;
+    margin-bottom: 6.8rem;
+    color: white;
+    font-size: 1.3rem;
+    z-index: 100;
+    filter: brightness(1);
+    user-select: none;
+    pointer-events: none;
+    transition: all 400ms;
+  }
+
+  .cover-container {
+    text-align: center;
+
+    img {
+      max-width: 20rem;
+      border-radius: 15px;
+      filter: brightness(0.9);
+      z-index: 0;
+      transition: all 400ms;
+    }
+  }
+
+  .post {
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    transition: all 400ms;
+    background-color: rgba(255, 255, 255, 0);
+    * {
+      transition: all 400ms;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    .meta-container {
+      margin-top: -1.5rem;
+
+      p {
+        font-family: Poppins, Arial;
+        color: $color1;
+        font-size: 0.85rem;
+        letter-spacing: 0;
+      }
+
+      .author p,
+      .date p {
+        color: $color4;
+      }
+
+      .date {
+        text-align: right;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        * {
+          color: $color4;
+        }
+      }
+    }
+  }
+}

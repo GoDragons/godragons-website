@@ -26,22 +26,36 @@ header {
     }
   }
 
-  .main-menu {
+  .nav-container {
     width: 100%;
-    flex-grow: 0;
+    text-align: right;
+  }
+
+  .main-menu {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 0;
+    // max-width: 500px;
 
     ul {
       list-style-type: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      margin-right: -2rem;
 
       li {
+        display: inline-block;
+
         a {
           color: rgba(255, 255, 255, 0.6);
-          font-weight: 600;
           text-decoration: none;
           font-size: 0.9rem;
+          font-family: Poppins, Arial;
+          font-weight: 700;
+          transition: all 300ms;
+          padding: 0.5rem 2rem;
+
+          &:hover {
+            color: $white;
+          }
         }
       }
     }
