@@ -5,12 +5,13 @@
   font-family: Karla, Arial;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: Sen, Arial;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: $darkGray;
   font-weight: 400;
   letter-spacing: -1px;
@@ -33,10 +34,12 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: Sen, Arial;
+  margin: 0.6rem 0;
 }
 
 h4 {
@@ -44,6 +47,14 @@ h4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: 700;
+}
+
+h5 {
+  text-transform: uppercase;
+  color: $darkGray;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.2rem 0;
 }
 
 img {

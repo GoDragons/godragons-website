@@ -86,12 +86,14 @@ function Home() {
                 <h2>Our Services</h2>
               </Col>
               <Col md={8}>
-                <p>
+                <h4>
                   From internal dashboards to real-time communication systems,
                   we build reliable, bespoke software solutions.
-                </p>
+                </h4>
               </Col>
             </Row>
+            <br />
+            <br />
             <ServicesGrid />
           </Container>
         </BoxedLayout>

@@ -18,7 +18,6 @@ import Blog from "../Blog/Blog";
 function App() {
   return (
     <Router>
-      {/* <IconLibrary /> */}
       <Header />
       <Switch>
         <Route exact path="/">
