@@ -1,18 +1,46 @@
 @import "../variables";
 
 .page-home {
+  .tagline {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+  }
+
   .segment {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding: 2rem;
 
     &.hero {
+      padding: 0;
       background-color: $color1;
       color: $white;
+      padding: 10rem 0;
+      height: 100vh;
+
+      h1 {
+        color: $white;
+        margin-bottom: 3rem;
+      }
+      h4 {
+        color: $white;
+        margin-bottom: 1.5rem;
+      }
+
+      button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+      }
     }
 
     &.purple {
       background-color: $color3;
       color: $white;
+
+      * {
+        color: $white;
+      }
 
       p {
         color: $white;

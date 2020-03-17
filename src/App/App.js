@@ -14,6 +14,7 @@ import Team from "../Team/Team";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import Blog from "../Blog/Blog";
+import BlogPostSyncApps from "../Blog/BlogPostSyncApps/BlogPostSyncApps";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
         </Route>
         <Route exact path="/blog">
           <Blog />
+        </Route>
+        <Route exact path="/blog/sync-apps">
+          <BlogPostSyncApps />
         </Route>
       </Switch>
       <Footer />

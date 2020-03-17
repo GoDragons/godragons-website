@@ -19,7 +19,7 @@ function Team() {
     return teamData.map((member, index) => {
       return (
         <React.Fragment key={member.name}>
-          <TeamMember {...member} />
+          <TeamMember {...member} alternateStyle={index % 2 === 0} />
           {index < teamData.length - 1 ? <Separator /> : null}
         </React.Fragment>
       );

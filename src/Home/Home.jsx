@@ -21,10 +21,10 @@ function Home() {
             <Row align="center">
               <Col md={7}>
                 <h1>Solve real business problems with technology</h1>
-                <h4>
+                <p className="tagline">
                   We turn your problems into business opportunities with tech
                   solutions
-                </h4>
+                </p>
                 <Link to="/contact">
                   <Button type="primary" label="Get in touch" />
                 </Link>

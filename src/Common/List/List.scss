@@ -1,0 +1,22 @@
+@import "../../variables";
+
+.list {
+  list-style-type: none;
+
+  li {
+    .icon {
+      margin-right: 1rem;
+
+      path {
+        fill: $color4;
+      }
+    }
+
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray;
+    }
+  }
+}
