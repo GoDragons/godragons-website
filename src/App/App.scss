@@ -65,9 +65,8 @@ h5 {
 }
 
 img {
-  &.img-responsive {
-    max-width: 100%;
-  }
+  display: inline-block;
+  max-width: 100%;
   user-select: none;
 }
 

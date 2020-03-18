@@ -32,7 +32,6 @@ function Home() {
               <Col md={5}>
                 <div className="illustration-container">
                   <img
-                    className="img-responsive"
                     alt="GoDragons hero (people working on tech)"
                     src={Hero}
                   />
@@ -47,11 +46,7 @@ function Home() {
           <Row align="center" gutterWidth={50}>
             <Hidden sm xs>
               <Col md={5}>
-                <img
-                  className="img-responsive"
-                  alt="People assembling building blocks"
-                  src={Ideation}
-                />
+                <img alt="People assembling building blocks" src={Ideation} />
               </Col>
             </Hidden>
             <Col md={7}>

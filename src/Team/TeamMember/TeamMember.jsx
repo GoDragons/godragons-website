@@ -41,11 +41,7 @@ export default function TeamMember({
   const portraitElement = (
     <Col sm={4}>
       <div className="portrait-container">
-        <img
-          src={photo}
-          className="img-responsive avatar"
-          alt={`Portrait of ${name}`}
-        />
+        <img src={photo} className="avatar" alt={`Portrait of ${name}`} />
       </div>
     </Col>
   );
