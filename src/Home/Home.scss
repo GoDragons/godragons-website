@@ -7,21 +7,27 @@
     margin-bottom: 1rem;
     font-weight: 900;
     letter-spacing: -1px;
+    color: $white;
+    line-height: 1.2;
   }
 
   .segment {
-    padding: 2rem;
+    padding: 10rem 2rem;
 
     &.hero {
-      padding: 0;
+      padding-top: 6rem;
+      padding-bottom: 11rem;
+
       background-color: $color1;
       color: $white;
-      padding: 10rem 0;
-      height: 100vh;
+      // padding: 10rem 0;
+
+      // height: calc(100vh - 4.5rem);
 
       h1 {
         color: $white;
         margin-bottom: 3rem;
+        margin-top: 0;
       }
       h4 {
         color: $white;
@@ -29,14 +35,20 @@
       }
 
       button {
-        padding: 1rem 2rem;
+        padding: 0.7rem 2.1rem;
         font-size: 1.1rem;
+      }
+
+      .illustration-container {
+        text-align: right;
       }
     }
 
     &.purple {
       background-color: $color3;
       color: $white;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
 
       * {
         color: $white;

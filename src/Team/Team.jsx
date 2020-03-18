@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Container } from "react-grid-system";
-
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
 
 import TeamMember from "./TeamMember/TeamMember";
@@ -29,10 +27,8 @@ function Team() {
   return (
     <div className="page-team">
       <BoxedLayout>
-        <Container>
-          <PageTitle value="Our Team" />
-          {displayTeamMembers()}
-        </Container>
+        <PageTitle value="Our Team" />
+        {displayTeamMembers()}
       </BoxedLayout>
     </div>
   );

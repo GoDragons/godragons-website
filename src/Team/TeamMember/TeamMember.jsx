@@ -1,5 +1,6 @@
 import React from "react";
 
+import cx from "classnames";
 import { Row, Col } from "react-grid-system";
 import Button from "../../Common/Button/Button";
 import Separator from "../../Common/Separator/Separator";
@@ -15,7 +16,7 @@ export default function TeamMember({
   alternateStyle = false
 }) {
   const descriptionElement = (
-    <Col sm={7}>
+    <Col sm={8}>
       <h3 className="name">{name}</h3>
       <h5 className="title">{title}</h5>
       <Separator />
@@ -38,17 +39,24 @@ export default function TeamMember({
   );
 
   const portraitElement = (
-    <Col sm={5}>
-      <img
-        src={photo}
-        className="img-responsive avatar"
-        alt={`Portrait of ${name}`}
-      />
+    <Col sm={4}>
+      <div className="portrait-container">
+        <img
+          src={photo}
+          className="img-responsive avatar"
+          alt={`Portrait of ${name}`}
+        />
+      </div>
     </Col>
   );
 
+  const rowClassName = cx("team-member", {
+    regular: !alternateStyle,
+    alternate: alternateStyle
+  });
+
   return (
-    <Row className="team-member" align="center">
+    <Row className={rowClassName} align="center">
       {alternateStyle ? (
         <>
           {descriptionElement} {portraitElement}
