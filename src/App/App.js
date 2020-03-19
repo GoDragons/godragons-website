@@ -1,7 +1,10 @@
 import React from "react";
 import "./App.scss";
+// import "../MyFontsWebfontsKit.css";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import "../IconLibrary/IconLibrary";
 import Header from "../Header/Header";
 import Home from "../Home/Home";
 import CaseStudies from "../CaseStudies/CaseStudies";

@@ -3,12 +3,20 @@
 button {
   padding: 10px 20px;
   border-radius: 3px;
-  font-weight: 700;
+  font-weight: 600;
 
   margin-top: 20px;
   display: block;
   font-size: 1rem;
   text-align: center;
+  cursor: pointer;
+  transition: all 400ms;
+  transform: scale(1);
+  user-select: none;
+
+  &:hover {
+    transform: scale(0.9);
+  }
 
   &.inline {
     margin-top: 0;
@@ -25,6 +33,21 @@ button {
     background-color: $color2;
     border: 1px solid $color2;
     color: $white;
+  }
+
+  &.linkedin {
+    font-family: Poppins, Arial;
+    font-weight: 600;
+    background-color: #0e76a8;
+    border-color: #0e76a8;
+    color: $white;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
   }
 
   &.disabled {

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import Logo from "../assets/godragons_logo_white_text-2.png";
 import "./Header.scss";
 
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
@@ -13,7 +14,7 @@ function Header() {
           <Link to="/">
             <img
               className="logo"
-              src="https://godragons-website-assets.s3.eu-west-2.amazonaws.com/godragons_logo_white_text_low_res.png"
+              src={Logo}
               alt="godragons logo"
             />
           </Link>
