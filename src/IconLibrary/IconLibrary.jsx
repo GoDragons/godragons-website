@@ -7,7 +7,9 @@ import {
   faProjectDiagram,
   faBell,
   faAngleRight,
-  faBullseye
+  faBullseye,
+  faTimes,
+  faCheckCircle
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -18,5 +20,7 @@ library.add(
   faProjectDiagram,
   faBell,
   faAngleRight,
-  faBullseye
+  faBullseye,
+  faTimes,
+  faCheckCircle
 );
