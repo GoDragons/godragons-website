@@ -43,7 +43,7 @@ function NewsletterForm() {
 
   return (
     <form className="newsletter-form" onSubmit={submitForm}>
-      <h1 className="title">Stay in the loop</h1>
+      <h2 className="title">Stay in the loop</h2>
       <input
         value={email}
         onChange={e => setEmail(e.target.value)}

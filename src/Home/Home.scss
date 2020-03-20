@@ -14,24 +14,43 @@
   .segment {
     padding: 10rem 2rem;
 
+    @media (max-width: $lg) {
+      padding: 3rem 0rem;
+    }
+    @media (max-width: $md) {
+      padding: 3rem 0rem;
+    }
+
     &.hero {
       padding-top: 6rem;
       padding-bottom: 11rem;
 
       background-color: $color1;
       color: $white;
-      // padding: 10rem 0;
 
-      // height: calc(100vh - 4.5rem);
+      @media (max-width: $md) {
+        padding: 2rem 0rem 3rem;
+      }
 
       h1 {
         color: $white;
         margin-bottom: 3rem;
         margin-top: 0;
+        line-height: 1.1;
+
+        @media (max-width: $md) {
+          margin-bottom: 1.5rem;
+          font-size: 2.5rem;
+        }
       }
-      h4 {
-        color: $white;
-        margin-bottom: 1.5rem;
+
+      .tagline {
+        @media (max-width: $md) {
+          font-size: 1.2rem;
+          margin-bottom: 2.5rem;
+          line-height: 1.5;
+          font-weight: 700;
+        }
       }
 
       button {
@@ -49,6 +68,10 @@
       color: $white;
       padding-top: 6rem;
       padding-bottom: 6rem;
+
+      @media (max-width: $md) {
+        padding: 2rem 0;
+      }
 
       * {
         color: $white;

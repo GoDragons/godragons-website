@@ -61,6 +61,9 @@ function Blog() {
             </div>
             <h5 className="section-title">Tech</h5>
             {displayBlogPosts("tech")}
+            <br />
+            <br />
+            <br />
           </Col>
           <Col md={6}>
             <div className="cover-container">

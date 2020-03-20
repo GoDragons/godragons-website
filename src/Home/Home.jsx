@@ -8,7 +8,11 @@ import { Hidden } from "react-grid-system";
 import Button from "../Common/Button/Button";
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
 import ServicesGrid from "./ServicesGrid/ServicesGrid";
+import Thumbnail from "../Common/Thumbnail/Thumbnail";
+import PageTitle from "../Common/PageTitle/PageTitle";
+
 import Hero from "../assets/godragons-hero.png";
+import GymPhoto from "../assets/godragons-gym-4.jpg";
 import Ideation from "../assets/godragons-building-blocks.png";
 import "./Home.scss";
 
@@ -73,20 +77,38 @@ function Home() {
       </div>
       <div className="purple segment">
         <BoxedLayout>
-          <Row>
-            <Col md={4}>
+          <Row align="center">
+            <Col xl={4} lg={5}>
               <h2>Our Services</h2>
             </Col>
-            <Col md={8}>
+            <Col xl={8} lg={7}>
               <h4>
                 From internal dashboards to real-time communication systems, we
                 build reliable, bespoke software solutions.
               </h4>
             </Col>
           </Row>
-          <br />
-          <br />
+          <Hidden md sm xs>
+            <br />
+            <br />
+          </Hidden>
+
           <ServicesGrid />
+        </BoxedLayout>
+      </div>
+
+      <div>
+        <BoxedLayout>
+          <PageTitle value="Case Study" />
+          <Thumbnail
+            title="HIIT Tribe"
+            subtitle="Using software to create a new kind of workout experience"
+            img={GymPhoto}
+            to="/case-studies/hiit-tribe"
+          />
+          <br />
+          <br />
+          <br />
         </BoxedLayout>
       </div>
     </div>

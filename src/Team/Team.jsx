@@ -28,7 +28,7 @@ function Team() {
     <div className="page-team">
       <BoxedLayout>
         <PageTitle value="Our Team" />
-        {displayTeamMembers()}
+        <div className="team-members-container">{displayTeamMembers()}</div>
       </BoxedLayout>
     </div>
   );

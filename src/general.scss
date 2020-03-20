@@ -1,0 +1,21 @@
+@import "./variables";
+@import "./typography";
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $color2; /* WebKit/Blink Browsers */
+  color: white;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  user-select: none;
+
+  &.full-width {
+    width: 100%;
+  }
+}
