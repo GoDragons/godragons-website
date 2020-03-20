@@ -3,7 +3,6 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 
 import "./Footer.scss";
-import { Container, Row, Col } from "react-grid-system";
 import FooterWidget from "./FooterWidget/FooterWidget";
 import NewsletterForm from "./NewsletterForm/NewsletterForm";
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";

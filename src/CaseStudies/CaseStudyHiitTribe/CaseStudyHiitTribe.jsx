@@ -10,9 +10,11 @@ import BoxedLayout from "../../Common/BoxedLayout/BoxedLayout";
 import PageTitle from "../../Common/PageTitle/PageTitle";
 import List from "../../Common/List/List";
 
+import "./CaseStudyHiitTribe.scss";
+
 export default function CaseStudyHiitTribe() {
   return (
-    <article>
+    <article className="case-study-hiit-tribe">
       <BoxedLayout>
         <Container fluid={true}>
           <PageTitle
@@ -21,7 +23,7 @@ export default function CaseStudyHiitTribe() {
             experience, while virtually eliminating wait times for customers"
           />
 
-          <Row justify="center">
+          <Row justify="center" className="highlights">
             <Col md={4}>
               <h3>Brief</h3>
               <p>
@@ -62,6 +64,8 @@ export default function CaseStudyHiitTribe() {
               />
             </Col>
           </Row>
+          <br />
+          <br />
           <h3>The Customer</h3>
           <p>
             HIIT Tribe is a wellbeing & fitness startup who are rethinking the
@@ -70,7 +74,11 @@ export default function CaseStudyHiitTribe() {
             community, and group workouts are the first step towards achieving
             that.
           </p>
-          <img className="full-width" src={TvAdImage} />
+          <img
+            className="full-width"
+            src={TvAdImage}
+            alt={"TV ad-style presentation"}
+          />
 
           <h1>Process</h1>
           <br />
@@ -131,7 +139,11 @@ export default function CaseStudyHiitTribe() {
           </p>
 
           <br />
-          <img className="full-width" src={FinishedGymImage} />
+          <img
+            className="full-width"
+            src={FinishedGymImage}
+            alt="Gym with workout solution installed"
+          />
 
           <br />
           <br />
