@@ -74,13 +74,19 @@ export default function CaseStudyHiitTribe() {
             community, and group workouts are the first step towards achieving
             that.
           </p>
+          <br />
+          <br />
           <img
             className="full-width"
             src={TvAdImage}
             alt={"TV ad-style presentation"}
           />
 
+          <br />
+          <br />
+          <br />
           <h1>Process</h1>
+          <br />
           <br />
           <h3>Technical feasibility</h3>
           <p>
