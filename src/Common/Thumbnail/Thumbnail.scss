@@ -77,9 +77,11 @@
     }
   }
 
-  &:hover {
-    .background {
-      filter: saturate(1.2) contrast(1.2) brightness(0.9);
+  @media (hover) {
+    &:hover {
+      .background {
+        filter: saturate(1.2) contrast(1.2) brightness(0.9);
+      }
     }
   }
 }
