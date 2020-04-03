@@ -1,0 +1,19 @@
+@import "../../variables";
+
+.cover-image-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 10rem 1rem;
+  width: 100%;
+  background-size: cover;
+
+  .title,
+  .subtitle {
+    text-align: center;
+    color: $white;
+    width: 100%;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.5);
+    font-size: 5rem;
+    letter-spacing: -5px;
+  }
+}

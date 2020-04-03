@@ -12,7 +12,7 @@ function Footer() {
   return (
     <footer>
       <BoxedLayout>
-        <Container>
+        <Container fluid={true}>
           <Row justify="start">
             <Col xs={12}>
               <NewsletterForm />

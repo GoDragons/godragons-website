@@ -1,6 +1,32 @@
 @import "../../variables";
 
 .team-member {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  .name {
+    letter-spacing: -2px;
+  }
+
+  .title {
+    margin-top: -0.7rem;
+    letter-spacing: 0px;
+  }
+
+  .portrait-container {
+    img {
+      display: inline-block;
+      max-width: 20rem;
+    }
+  }
+
+  &.alternate {
+    .portrait-container {
+      text-align: right;
+    }
+  }
 }

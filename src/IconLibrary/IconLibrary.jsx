@@ -6,7 +6,10 @@ import {
   faLaptopCode,
   faProjectDiagram,
   faBell,
-  faAngleRight
+  faAngleRight,
+  faBullseye,
+  faTimes,
+  faCheckCircle
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -16,5 +19,8 @@ library.add(
   faLaptopCode,
   faProjectDiagram,
   faBell,
-  faAngleRight
+  faAngleRight,
+  faBullseye,
+  faTimes,
+  faCheckCircle
 );
