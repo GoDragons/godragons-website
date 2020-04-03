@@ -15,7 +15,7 @@ function Header() {
   const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
   const [
     mobileNavBackgroundIsShowing,
-    setMobileNavBackgroundIsShowing
+    setMobileNavBackgroundIsShowing,
   ] = useState(false);
 
   function displayDesktopHeader() {
@@ -59,7 +59,7 @@ function Header() {
       setMobileNavIsOpen(false);
       setTimeout(() => {
         setMobileNavBackgroundIsShowing(false);
-      }, 500);
+      }, 200);
     }
   }
 
@@ -67,7 +67,7 @@ function Header() {
     setMobileNavBackgroundIsShowing(true);
     setTimeout(() => {
       setMobileNavIsOpen(true);
-    }, 500);
+    }, 400);
   }
 
   function displayNav() {
@@ -112,28 +112,37 @@ function Header() {
       <aside
         className={cx("mobile-nav-background-1", {
           visible: mobileNavBackgroundIsShowing,
-          hidden: !mobileNavBackgroundIsShowing
+          hidden: !mobileNavBackgroundIsShowing,
         })}
         onClick={hideMobileNav}
       />
       <aside
         className={cx("mobile-nav-background-2", {
           visible: mobileNavBackgroundIsShowing,
-          hidden: !mobileNavBackgroundIsShowing
+          hidden: !mobileNavBackgroundIsShowing,
         })}
         onClick={hideMobileNav}
       />
       <aside
         className={cx("mobile-nav-background-3", {
           visible: mobileNavBackgroundIsShowing,
-          hidden: !mobileNavBackgroundIsShowing
+          hidden: !mobileNavBackgroundIsShowing,
         })}
         onClick={hideMobileNav}
       />
+      <button
+        className={cx("mobile-nav-background-close-button", {
+          visible: mobileNavBackgroundIsShowing,
+          hidden: !mobileNavBackgroundIsShowing,
+        })}
+        onClick={hideMobileNav}
+      >
+        <FontAwesomeIcon icon="times" className="icon" color="#fefefe" />
+      </button>
       <div
         className={cx("mobile-nav", {
           visible: mobileNavIsOpen,
-          hidden: !mobileNavIsOpen
+          hidden: !mobileNavIsOpen,
         })}
         onClick={hideMobileNav}
       >

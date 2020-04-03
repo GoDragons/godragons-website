@@ -104,7 +104,8 @@ header {
 
   .mobile-nav-background-1,
   .mobile-nav-background-2,
-  .mobile-nav-background-3 {
+  .mobile-nav-background-3,
+  .mobile-nav-background-close-button {
     position: fixed;
     border-radius: 50%;
     transform-origin: 50% 50%;
@@ -177,11 +178,41 @@ header {
     }
   }
 
+  .mobile-nav-background-close-button {
+    width: 4rem;
+    height: 4rem;
+    transform: translate(-50%, -50%);
+    background-color: $nav-bg-color;
+    z-index: 2;
+    border: 0;
+    margin-top: 0;
+    left: 4.5rem;
+
+    &.visible {
+      bottom: 1rem;
+    }
+
+    &.hidden {
+      bottom: -10rem;
+    }
+
+    .icon {
+      position: absolute;
+      transform: translate(-50%, -50%) scale(2);
+      top: 50%;
+      left: 50%;
+
+      path {
+        fill: white;
+      }
+    }
+  }
+
   .mobile-nav {
     position: fixed;
     top: 3rem;
     right: 2rem;
-    transition: all 300ms ease-in-out;
+    transition: all 600ms ease-out;
     z-index: 4;
     overflow-y: hidden;
     width: 100%;
