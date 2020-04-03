@@ -1,7 +1,5 @@
 import React from "react";
 
-import { withRouter } from "react-router-dom";
-
 import List from "../../Common/List/List";
 
 import FeaturedImagePath from "../../assets/godragons-app-sync.jpg";
@@ -12,12 +10,12 @@ import Separator from "../../Common/Separator/Separator";
 
 import "./BlogPostSyncApps.scss";
 
-function BlogPostSyncApps() {
+export default function BlogPostSyncApps() {
   return (
-    <div className="blog-post-sync-apps">
+    <article className="blog-post-sync-apps">
       <BoxedLayout>
         <CoverImage
-          path={FeaturedImagePath}
+          img={FeaturedImagePath}
           title="Keeping apps in sync…"
           subtitle="How hard can it be?"
         />
@@ -56,7 +54,7 @@ function BlogPostSyncApps() {
             "Broadcasting server time every second via websockets",
             "Combining the first 2: syncing the time every minute, and using the internal clock in-between requests <b class='highlight'>(spoiler alert: this is it)</b>"
           ]}
-          icon="bullseye"
+          ordered={true}
           rich={true}
         />
         <br />
@@ -73,7 +71,7 @@ function BlogPostSyncApps() {
         <br />
         <br />
         <h3>
-          1) Relying on the internal clock of the device, and just periodically
+          1 . Relying on the internal clock of the device, and just periodically
           reading from it
         </h3>
 
@@ -124,7 +122,7 @@ function BlogPostSyncApps() {
 
         <br />
         <br />
-        <h3>2) Pinging a server every second to get the time</h3>
+        <h3>2 . Pinging a server every second to get the time</h3>
 
         <p>
           To avoid relying on the internal clock of the system, we can just ping
@@ -142,7 +140,8 @@ function BlogPostSyncApps() {
         />
         <br />
         <br />
-        <h3>3) Broadcasting server time every second via websockets</h3>
+        <br />
+        <h3>3 . Broadcasting server time every second via websockets</h3>
 
         <p>
           Once we’ve established our two-way communication between client and
@@ -173,8 +172,9 @@ function BlogPostSyncApps() {
 
         <br />
         <br />
+        <br />
         <h3>
-          4) Combining the first two: syncing the time every minute, and using
+          4 . Combining the first two: syncing the time every minute, and using
           the internal clock in-between requests{" "}
           <b className="highlight">(spoiler alert: this is it)</b>
         </h3>
@@ -239,6 +239,7 @@ function BlogPostSyncApps() {
 
         <br />
         <br />
+        <br />
         <h3>
           We could also use off-the-shelf solutions that could be installed on
           the machines, which would do this for us, right?
@@ -260,8 +261,6 @@ function BlogPostSyncApps() {
         <br />
         <br />
       </BoxedLayout>
-    </div>
+    </article>
   );
 }
-
-export default withRouter(BlogPostSyncApps);

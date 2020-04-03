@@ -4,9 +4,9 @@ import cx from "classnames";
 
 import "./CoverImage.scss";
 
-function CoverImage({ path, title, subtitle, className }) {
+function CoverImage({ img, title, subtitle, className }) {
   const style = {
-    backgroundImage: `url(${path})`
+    backgroundImage: `url(${img})`
   };
 
   let titleElement = null;

@@ -32,7 +32,7 @@
   }
 
   .post {
-    margin-bottom: 2rem;
+    margin-bottom: -1rem;
     margin-top: 2.5rem;
     transition: all 400ms;
     background-color: rgba(255, 255, 255, 0);
@@ -48,7 +48,7 @@
       margin-top: -1.5rem;
 
       p {
-        font-family: Poppins, Arial;
+        // font-family: Poppins, Arial;
         color: $color1;
         font-size: 0.85rem;
         letter-spacing: 0;
@@ -64,11 +64,10 @@
       }
     }
 
-    @media (hover: hover) {
-      &:hover {
-        * {
-          color: $color4;
-        }
+    &:hover {
+      // background-color: $color4;
+      * {
+        color: $color4;
       }
     }
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import "../general.scss";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -14,38 +15,46 @@ import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import Blog from "../Blog/Blog";
 import BlogPostSyncApps from "../Blog/BlogPostSyncApps/BlogPostSyncApps";
+import CaseStudyHiitTribe from "../CaseStudies/CaseStudyHiitTribe/CaseStudyHiitTribe";
+
+import ScrollToTop from "../Common/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/case-studies">
-          <CaseStudies />
-        </Route>
-        <Route exact path="/services">
-          <Services />
-        </Route>
-        <Route exact path="/pricing">
-          <Pricing />
-        </Route>
-        <Route exact path="/team">
-          <Team />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route exact path="/blog">
-          <Blog />
-        </Route>
-        <Route exact path="/blog/sync-apps">
-          <BlogPostSyncApps />
-        </Route>
-      </Switch>
-      <Footer />
+      <ScrollToTop>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/case-studies">
+            <CaseStudies />
+          </Route>
+          <Route exact path="/services">
+            <Services />
+          </Route>
+          <Route exact path="/pricing">
+            <Pricing />
+          </Route>
+          <Route exact path="/team">
+            <Team />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route exact path="/blog">
+            <Blog />
+          </Route>
+          <Route exact path="/blog/sync-apps">
+            <BlogPostSyncApps />
+          </Route>
+          <Route exact path="/case-studies/hiit-tribe">
+            <CaseStudyHiitTribe />
+          </Route>
+        </Switch>
+        <Footer />
+      </ScrollToTop>
     </Router>
   );
 }

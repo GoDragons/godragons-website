@@ -1,10 +1,19 @@
 @import "../../variables";
 
-.page-title {
-  text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  font-size: 3.5rem;
-  color: $black;
-  width: 100%;
+.page-title-container {
+  max-width: 50rem;
+  margin: 4rem auto;
+
+  .title {
+    text-align: center;
+  }
+
+  .tagline {
+    text-align: center;
+    color: $darkGray;
+  }
+
+  @media (max-width: $md) {
+    margin: 2rem auto;
+  }
 }

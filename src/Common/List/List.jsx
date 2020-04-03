@@ -4,7 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./List.scss";
 
-export default function List({ items, icon, html = false, rich = false }) {
+export default function List({
+  items,
+  icon,
+  html = false,
+  rich = false,
+  ordered = false
+}) {
   function displayItems() {
     return items.map((item, index) => {
       let content = null;
@@ -16,6 +22,9 @@ export default function List({ items, icon, html = false, rich = false }) {
           iconElement = (
             <FontAwesomeIcon icon={icon} className="icon" color="#fefefe" />
           );
+        }
+        if (ordered) {
+          iconElement = <span className="order">{index + 1}.</span>;
         }
 
         let labelElement = <p className="label">{item}</p>;

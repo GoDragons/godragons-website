@@ -57,14 +57,17 @@ function Blog() {
         <Row className="content">
           <Col md={6}>
             <div className="cover-container">
-              <img src={TechImage} alt="tech blog post icon" />
+              <img src={TechImage} alt="Open laptop" />
             </div>
             <h5 className="section-title">Tech</h5>
             {displayBlogPosts("tech")}
+            <br />
+            <br />
+            <br />
           </Col>
           <Col md={6}>
             <div className="cover-container">
-              <img src={IdeasImage} alt="people blog post icon" />
+              <img src={IdeasImage} alt="Sliced lemon on blue background" />
             </div>
             <h5 className="section-title">People</h5>
             {displayBlogPosts("people")}
