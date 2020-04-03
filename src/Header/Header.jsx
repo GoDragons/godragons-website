@@ -39,19 +39,11 @@ function Header() {
             <img className="logo" src={Logo} alt="godragons logo" />
           </Link>
         </div>
-        <div className="hamburger-icon" onClick={toggleMobileNav}>
+        <div className="hamburger-icon" onClick={showMobileNav}>
           <FontAwesomeIcon icon="bars" />
         </div>
       </div>
     );
-  }
-
-  function toggleMobileNav() {
-    if (mobileNavIsOpen) {
-      hideMobileNav();
-    } else {
-      showMobileNav();
-    }
   }
 
   function hideMobileNav() {
