@@ -11,7 +11,7 @@ import {
   faTimes,
   faCheckCircle,
   faCheck,
-  faBars
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
