@@ -15,8 +15,10 @@ button {
   transform: scale(1);
   user-select: none;
 
-  &:hover {
-    transform: scale(0.9);
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(0.9);
+    }
   }
 
   &.inline {
