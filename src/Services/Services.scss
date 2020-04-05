@@ -1,0 +1,11 @@
+@import "../variables";
+
+.services-page {
+  background-color: $color3;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  * {
+    color: $white;
+  }
+}

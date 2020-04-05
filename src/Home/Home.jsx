@@ -1,13 +1,11 @@
 import React from "react";
 
 import { withRouter, Link } from "react-router-dom";
-import { Row, Col } from "react-grid-system";
-
-import { Hidden } from "react-grid-system";
+import { Row, Col, Hidden } from "react-grid-system";
 
 import Button from "../Common/Button/Button";
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
-import ServicesGrid from "./ServicesGrid/ServicesGrid";
+import ServicesGrid from "../ServicesGrid/ServicesGrid";
 import Thumbnail from "../Common/Thumbnail/Thumbnail";
 import PageTitle from "../Common/PageTitle/PageTitle";
 
@@ -77,22 +75,6 @@ function Home() {
       </div>
       <div className="purple segment">
         <BoxedLayout>
-          <Row align="center">
-            <Col xl={4} lg={5}>
-              <h2>Our Services</h2>
-            </Col>
-            <Col xl={8} lg={7}>
-              <h4>
-                From internal dashboards to real-time communication systems, we
-                build reliable, bespoke software solutions.
-              </h4>
-            </Col>
-          </Row>
-          <Hidden md sm xs>
-            <br />
-            <br />
-          </Hidden>
-
           <ServicesGrid />
         </BoxedLayout>
       </div>
