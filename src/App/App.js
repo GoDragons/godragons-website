@@ -9,6 +9,7 @@ import Header from "../Header/Header";
 import Home from "../Home/Home";
 import CaseStudies from "../CaseStudies/CaseStudies";
 import Services from "../Services/Services";
+import Prototyping from "../Services/Prototyping/Prototyping";
 import Pricing from "../Pricing/Pricing";
 import Team from "../Team/Team";
 import Contact from "../Contact/Contact";
@@ -51,6 +52,9 @@ function App() {
           </Route>
           <Route exact path="/case-studies/hiit-tribe">
             <CaseStudyHiitTribe />
+          </Route>
+          <Route exact path="/services/prototyping">
+            <Prototyping />
           </Route>
         </Switch>
         <Footer />

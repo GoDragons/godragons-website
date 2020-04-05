@@ -1,0 +1,15 @@
+@import "../variables";
+
+.service-page {
+  .service-info {
+    padding-bottom: 3rem;
+
+    .service-name {
+      margin-top: 0;
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+}
