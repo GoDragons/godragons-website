@@ -36,3 +36,20 @@ export const prototyping = [
     image: LogoDragon,
   },
 ];
+
+export const ideation = [
+  {
+    name: "4 Hour Session",
+    list: [
+      "2 Consultants",
+      "4 Hours",
+      "Written report",
+      "2 Sessions recommended",
+    ],
+    priceAmount: "1k",
+    currency: "£",
+    currencyPosition: "left",
+    priceFrequency: null,
+    image: LogoDragon,
+  },
+];

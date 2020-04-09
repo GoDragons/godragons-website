@@ -9,7 +9,7 @@ import Header from "../Header/Header";
 import Home from "../Home/Home";
 import CaseStudies from "../CaseStudies/CaseStudies";
 import Services from "../Services/Services";
-import Prototyping from "../Services/Prototyping/Prototyping";
+import IndividualService from "../IndividualService/IndividualService";
 import Pricing from "../Pricing/Pricing";
 import Team from "../Team/Team";
 import Contact from "../Contact/Contact";
@@ -20,7 +20,20 @@ import CaseStudyHiitTribe from "../CaseStudies/CaseStudyHiitTribe/CaseStudyHiitT
 
 import ScrollToTop from "../Common/ScrollToTop/ScrollToTop";
 
+import servicesData from "../Data/servicesData";
+
 function App() {
+  function displayServicesRoutes() {
+    return servicesData.map((service, index) => {
+      const serviceName = service.name.toLowerCase().split(" ").join("-");
+      return (
+        <Route exact path={`/services/${serviceName}`} key={index}>
+          <IndividualService serviceData={service} />
+        </Route>
+      );
+    });
+  }
+
   return (
     <Router>
       <ScrollToTop>
@@ -53,9 +66,7 @@ function App() {
           <Route exact path="/case-studies/hiit-tribe">
             <CaseStudyHiitTribe />
           </Route>
-          <Route exact path="/services/prototyping">
-            <Prototyping />
-          </Route>
+          {displayServicesRoutes()}
         </Switch>
         <Footer />
       </ScrollToTop>

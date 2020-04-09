@@ -1,56 +1,46 @@
 @import "../../variables";
 
 $itemWidth1: 25rem;
-$itemWidth2: 20rem;
-$itemWidth3: 17rem;
+$itemWidth2: 17rem;
 $tableHorizontalPadding1: 2rem;
 $tableHorizontalPadding2: 1rem;
+
+$titleColor: lighten($color1, 50);
+$listColor: desaturate($color3, 50);
+$priceColor: darken(saturate($titleColor, 50), 20);
 
 @function breakpointLevel($itemWidth, $columns, $tablePadding) {
   @return ($itemWidth * $columns + $tablePadding * 2);
 }
 
-@mixin table-level-1 {
-  .item {
-    width: $itemWidth2;
-  }
-}
-
-@mixin table-level-2 {
-  .item {
-    width: $itemWidth3;
-  }
-}
-
 @mixin responsive-table($columns) {
+  display: flex;
+  width: $itemWidth1 * $columns;
+
   @media (max-width: breakpointLevel($itemWidth1, $columns, $tableHorizontalPadding1)) {
-    @include table-level-1;
-  }
-  @media (max-width: breakpointLevel($itemWidth2, $columns, $tableHorizontalPadding2)) {
-    @include table-level-2;
-  }
-  @media (max-width: breakpointLevel($itemWidth3, $columns, $tableHorizontalPadding2)) {
-    @include table-level-3;
-  }
-}
-
-/* stacked version */
-@mixin table-level-3 {
-  display: block;
-  background-color: transparent;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: unset;
-  padding: 0;
-
-  .item {
     width: 100%;
-    margin-bottom: 2rem;
-    background-color: white;
-    border-radius: 0.8rem;
-    padding-bottom: 2rem;
-    box-shadow: 0rem 0.5rem 2rem darken($color3, 10);
-    padding-top: 2rem;
+  }
+
+  @media (max-width: breakpointLevel($itemWidth2, $columns, $tableHorizontalPadding2)) {
+    display: block;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: unset;
+    padding: 0;
+
+    .item {
+      width: 100%;
+      max-width: 25rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem;
+      background-color: white;
+      border-radius: 0.8rem;
+      padding-bottom: 2rem;
+      box-shadow: 0rem 0.5rem 2rem darken($color3, 10);
+      padding-top: 2rem;
+    }
   }
 }
 
@@ -59,25 +49,20 @@ $tableHorizontalPadding2: 1rem;
   width: 100%;
   padding-top: $tableHorizontalPadding1;
   padding-bottom: $tableHorizontalPadding1;
-  display: flex;
-  justify-content: space-around;
 
   .pricing-table {
     list-style-type: none;
     padding-left: 0;
     background-color: $white;
-    display: inline-flex;
     border-radius: 0.8rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    margin: 0 auto;
 
-    $titleColor: lighten($color1, 50);
-    $listColor: desaturate($color3, 50);
-    $priceColor: darken(saturate($titleColor, 50), 20);
     box-shadow: 0rem 0.5rem 2rem darken($color3, 10);
 
     .item {
-      width: $itemWidth1;
+      width: 100%;
       text-align: center;
       padding-left: 1rem;
       padding-right: 1rem;
