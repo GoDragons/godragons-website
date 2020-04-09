@@ -2,7 +2,7 @@ import React from "react";
 
 import { Row, Col, Hidden } from "react-grid-system";
 
-import services from "./servicesData.json";
+import services from "../Data/servicesData";
 
 import ServiceItem from "./ServiceItem/ServiceItem";
 
