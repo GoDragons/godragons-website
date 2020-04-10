@@ -64,10 +64,11 @@
       }
     }
 
-    &:hover {
-      // background-color: $color4;
-      * {
-        color: $color4;
+    @media (hover: hover) {
+      &:hover {
+        * {
+          color: $color4;
+        }
       }
     }
   }

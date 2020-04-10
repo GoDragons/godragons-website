@@ -13,17 +13,17 @@ export default function TeamMember({
   bio,
   linkedin,
   photo,
-  alternateStyle = false
+  alternateStyle = false,
 }) {
   const descriptionElement = (
-    <Col sm={8}>
+    <Col md={8}>
       <h3 className="name">{name}</h3>
       <h5 className="title">{title}</h5>
       <Separator />
       <p
         className="bio"
         dangerouslySetInnerHTML={{
-          __html: bio
+          __html: bio,
         }}
       />
 
@@ -39,7 +39,7 @@ export default function TeamMember({
   );
 
   const portraitElement = (
-    <Col sm={4}>
+    <Col md={4} className="portrait-column">
       <div className="portrait-container">
         <img src={photo} className="avatar" alt={`Portrait of ${name}`} />
       </div>
@@ -48,7 +48,7 @@ export default function TeamMember({
 
   const rowClassName = cx("team-member", {
     regular: !alternateStyle,
-    alternate: alternateStyle
+    alternate: alternateStyle,
   });
 
   return (

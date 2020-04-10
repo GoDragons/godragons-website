@@ -9,6 +9,7 @@ import Header from "../Header/Header";
 import Home from "../Home/Home";
 import CaseStudies from "../CaseStudies/CaseStudies";
 import Services from "../Services/Services";
+import IndividualService from "../IndividualService/IndividualService";
 import Pricing from "../Pricing/Pricing";
 import Team from "../Team/Team";
 import Contact from "../Contact/Contact";
@@ -18,6 +19,8 @@ import BlogPostSyncApps from "../Blog/BlogPostSyncApps/BlogPostSyncApps";
 import CaseStudyHiitTribe from "../CaseStudies/CaseStudyHiitTribe/CaseStudyHiitTribe";
 
 import ScrollToTop from "../Common/ScrollToTop/ScrollToTop";
+
+import servicesData from "../Data/servicesData";
 
 function App() {
   return (
@@ -52,6 +55,13 @@ function App() {
           <Route exact path="/case-studies/hiit-tribe">
             <CaseStudyHiitTribe />
           </Route>
+          {servicesData.map((service, index) => {
+            return (
+              <Route exact path={`/services/${service.slug}`} key={index}>
+                <IndividualService service={service} />
+              </Route>
+            );
+          })}
         </Switch>
         <Footer />
       </ScrollToTop>

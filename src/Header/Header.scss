@@ -64,8 +64,10 @@ header {
             padding: 1rem 0.5rem;
           }
 
-          &:hover {
-            color: $white;
+          @media (hover: hover) {
+            &:hover {
+              color: $white;
+            }
           }
         }
       }

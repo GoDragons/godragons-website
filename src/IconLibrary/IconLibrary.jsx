@@ -10,7 +10,9 @@ import {
   faBullseye,
   faTimes,
   faCheckCircle,
-  faCheck
+  faCheck,
+  faBars,
+  faAsterisk,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -24,5 +26,7 @@ library.add(
   faBullseye,
   faTimes,
   faCheckCircle,
-  faCheck
+  faCheck,
+  faBars,
+  faAsterisk
 );
