@@ -43,12 +43,6 @@
     }
   }
 
-  &.alternate {
-    .portrait-container {
-      // text-align: right;
-    }
-  }
-
   @media (max-width: $sm) {
     .portrait-column {
       order: -1;
