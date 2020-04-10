@@ -39,16 +39,14 @@ header {
     ul {
       list-style-type: none;
       margin-right: -2rem;
+      display: block;
 
       @media (max-width: $max-page-width) {
         margin-right: 0;
       }
 
       li {
-        display: inline-block;
-
         a {
-          color: rgba(255, 255, 255, 0.6);
           text-decoration: none;
           font-size: 0.9rem;
           font-family: Poppins, Arial;
@@ -63,11 +61,56 @@ header {
           @media (max-width: $md) {
             padding: 1rem 0.5rem;
           }
+        }
+      }
+    }
 
-          @media (hover: hover) {
-            &:hover {
-              color: $white;
-            }
+    li {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+
+      li {
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        text-align: left;
+        display: none;
+      }
+
+      a {
+        color: rgba(255, 255, 255, 0.6);
+        white-space: nowrap;
+      }
+
+      .has-children-icon {
+        margin-left: 0.2rem;
+
+        path {
+          fill: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          ul {
+            display: block;
+            position: absolute;
+            padding: 0.7rem;
+            background-color: $color1;
+            top: 2rem;
+            left: 0;
+          }
+        }
+      }
+
+      @media (hover: hover) {
+        a:hover {
+          color: $white;
+          path {
+            fill: $white;
           }
         }
       }

@@ -2,12 +2,47 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { Hidden, Visible } from "react-grid-system";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Logo from "../assets/godragons_logo_white_text-2.png";
 import "./Header.scss";
 
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
 
+import headerData from "../Data/headerData";
+
 function Header() {
+  function displayChildren(item) {
+    if (!item.children) {
+      return null;
+    }
+    return displayMenuItemsRecursively(item.children);
+  }
+
+  function displayLabel(item) {
+    if (!item.children) {
+      return item.label;
+    }
+
+    return (
+      <>
+        {item.label}
+        <FontAwesomeIcon icon="angle-down" className="has-children-icon" />
+      </>
+    );
+  }
+
+  function displayMenuItemsRecursively(level) {
+    const elements = level.map((item) => (
+      <li key={item.slug}>
+        <Link to={`/${item.slug}`}>{displayLabel(item)}</Link>
+        {displayChildren(item)}
+      </li>
+    ));
+    return <ul>{elements}</ul>;
+  }
+
   function displayDesktopNav() {
     return (
       <>
@@ -18,26 +53,7 @@ function Header() {
         </div>
         <div className="nav-container">
           <nav className="main-menu">
-            <ul>
-              <li>
-                <Link to="/case-studies">Case Studies</Link>
-              </li>
-              <li>
-                <Link to="/services">Services</Link>
-              </li>
-              <li>
-                <Link to="/pricing">Pricing</Link>
-              </li>
-              <li>
-                <Link to="/team">Team</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-              <li>
-                <Link to="/blog">Blog</Link>
-              </li>
-            </ul>
+            {displayMenuItemsRecursively(headerData)}
           </nav>
         </div>
       </>
