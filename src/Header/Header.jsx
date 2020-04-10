@@ -51,6 +51,15 @@ function Header() {
     return <ul>{elements}</ul>;
   }
 
+  function displayMobileMenuItems(level) {
+    const elements = level.map((item) => (
+      <li key={item.slug}>
+        <Link to={`/${item.slug}`}>{item.label}</Link>
+      </li>
+    ));
+    return <ul>{elements}</ul>;
+  }
+
   function displayDesktopHeader() {
     return (
       <div className="desktop-header">
@@ -59,7 +68,11 @@ function Header() {
             <img className="logo" src={Logo} alt="godragons logo" />
           </Link>
         </div>
-        {displayNav()}
+        <div className="nav-container" onClick={hideMobileNav}>
+          <nav className="main-menu">
+            {displayMenuItemsRecursively(headerData)}
+          </nav>
+        </div>
       </div>
     );
   }
@@ -95,13 +108,54 @@ function Header() {
     }, 400);
   }
 
-  function displayNav() {
+  function displayMobileNav() {
     return (
-      <div className="nav-container" onClick={hideMobileNav}>
-        <nav className="main-menu">
-          {displayMenuItemsRecursively(headerData)}
-        </nav>
-      </div>
+      <>
+        <aside
+          className={cx("mobile-nav-background-1", {
+            visible: mobileNavBackgroundIsShowing,
+            hidden: !mobileNavBackgroundIsShowing,
+          })}
+          onClick={hideMobileNav}
+        />
+        <aside
+          className={cx("mobile-nav-background-2", {
+            visible: mobileNavBackgroundIsShowing,
+            hidden: !mobileNavBackgroundIsShowing,
+          })}
+          onClick={hideMobileNav}
+        />
+        <aside
+          className={cx("mobile-nav-background-3", {
+            visible: mobileNavBackgroundIsShowing,
+            hidden: !mobileNavBackgroundIsShowing,
+          })}
+          onClick={hideMobileNav}
+        />
+        <button
+          className={cx("mobile-nav-background-close-button", {
+            visible: mobileNavBackgroundIsShowing,
+            hidden: !mobileNavBackgroundIsShowing,
+          })}
+          onClick={hideMobileNav}
+        >
+          <FontAwesomeIcon icon="times" className="icon" color="#fefefe" />
+        </button>
+
+        <div
+          className={cx("mobile-nav", {
+            visible: mobileNavIsOpen,
+            hidden: !mobileNavIsOpen,
+          })}
+          onClick={hideMobileNav}
+        >
+          <div className="nav-container" onClick={hideMobileNav}>
+            <nav className="main-menu">
+              {displayMobileMenuItems(headerData)}
+            </nav>
+          </div>
+        </div>
+      </>
     );
   }
 
@@ -115,45 +169,8 @@ function Header() {
           {displayMobileHeader()}
         </Visible>
       </BoxedLayout>
-      <aside
-        className={cx("mobile-nav-background-1", {
-          visible: mobileNavBackgroundIsShowing,
-          hidden: !mobileNavBackgroundIsShowing,
-        })}
-        onClick={hideMobileNav}
-      />
-      <aside
-        className={cx("mobile-nav-background-2", {
-          visible: mobileNavBackgroundIsShowing,
-          hidden: !mobileNavBackgroundIsShowing,
-        })}
-        onClick={hideMobileNav}
-      />
-      <aside
-        className={cx("mobile-nav-background-3", {
-          visible: mobileNavBackgroundIsShowing,
-          hidden: !mobileNavBackgroundIsShowing,
-        })}
-        onClick={hideMobileNav}
-      />
-      <button
-        className={cx("mobile-nav-background-close-button", {
-          visible: mobileNavBackgroundIsShowing,
-          hidden: !mobileNavBackgroundIsShowing,
-        })}
-        onClick={hideMobileNav}
-      >
-        <FontAwesomeIcon icon="times" className="icon" color="#fefefe" />
-      </button>
-      <div
-        className={cx("mobile-nav", {
-          visible: mobileNavIsOpen,
-          hidden: !mobileNavIsOpen,
-        })}
-        onClick={hideMobileNav}
-      >
-        {displayNav()}
-      </div>
+
+      {displayMobileNav()}
     </header>
   );
 }

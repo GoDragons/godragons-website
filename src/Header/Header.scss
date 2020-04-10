@@ -3,7 +3,7 @@
 header {
   background-color: $color1;
   color: $white;
-  padding: 10px 0;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -30,7 +30,6 @@ header {
     }
 
     .hamburger-icon {
-      // background-color: red;
       padding: 1rem;
       margin-right: -0.5rem;
       margin-top: -0rem;
@@ -97,14 +96,21 @@ header {
       white-space: nowrap;
       display: inline-block;
 
-      li {
-        display: block;
-        margin-bottom: 1rem;
-      }
-
       ul {
         text-align: left;
         display: none;
+        position: absolute;
+        padding: 0.7rem;
+        padding-top: 1.7rem;
+        background-color: $color1;
+        top: 2rem;
+        left: -0.7rem;
+
+        li {
+          display: block;
+          margin-bottom: 1rem;
+          font-weight: 400;
+        }
       }
 
       a {
@@ -124,11 +130,6 @@ header {
         &:hover {
           ul {
             display: block;
-            position: absolute;
-            padding: 0.7rem;
-            background-color: $color1;
-            top: 2rem;
-            left: 0;
           }
         }
       }

@@ -10,7 +10,6 @@ import Home from "../Home/Home";
 import CaseStudies from "../CaseStudies/CaseStudies";
 import Services from "../Services/Services";
 import IndividualService from "../IndividualService/IndividualService";
-import Pricing from "../Pricing/Pricing";
 import Team from "../Team/Team";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
@@ -36,9 +35,6 @@ function App() {
           </Route>
           <Route exact path="/services">
             <Services />
-          </Route>
-          <Route exact path="/pricing">
-            <Pricing />
           </Route>
           <Route exact path="/team">
             <Team />
