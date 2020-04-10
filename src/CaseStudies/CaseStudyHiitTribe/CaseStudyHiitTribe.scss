@@ -1,12 +1,12 @@
-.case-study-hiit-tribe {
-  .highlights {
-    h3 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-  }
+@import "../../variables";
 
-  p {
-    text-align: justify;
+.case-study-hiit-tribe {
+  @media (min-width: $md) {
+    .highlights {
+      h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    }
   }
 }

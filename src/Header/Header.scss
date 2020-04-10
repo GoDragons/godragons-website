@@ -3,25 +3,52 @@
 header {
   background-color: $color1;
   color: $white;
-  padding: 10px 0;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1;
 
-  .boxed-layout {
+  .desktop-header,
+  .mobile-header {
+    display: flex;
+    width: 100%;
     flex-direction: row;
     align-items: center;
+    z-index: 1;
+  }
+
+  .desktop-header {
+    .logo-container {
+      width: $logo-desktop-width;
+    }
+  }
+
+  .mobile-header {
+    justify-content: space-between;
+
+    .logo-container {
+      width: $logo-mobile-width;
+    }
+
+    .hamburger-icon {
+      padding: 1rem;
+      margin-right: -0.5rem;
+      margin-top: -0rem;
+      transform: scale(1.5);
+
+      path {
+        fill: $white;
+      }
+    }
   }
 
   .logo-container {
-    width: $logo-desktop-width;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
     .logo {
-      // height: 30px;
       width: 100%;
     }
   }
@@ -31,44 +58,277 @@ header {
     text-align: right;
   }
 
+  @mixin main-menu-list {
+    list-style-type: none;
+    margin-right: -2rem;
+    display: block;
+
+    @media (max-width: $max-page-width) {
+      margin-right: 0;
+    }
+  }
+
+  @mixin secondary-menu-list {
+    text-align: left;
+    display: none;
+    position: absolute;
+
+    padding-top: 1.7rem;
+    padding-left: 0;
+    top: 1.5rem;
+  }
+
+  @mixin main-menu-link {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: Poppins, Arial;
+    font-weight: 700;
+    transition: all 300ms;
+    padding: 1rem 2rem;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+
+    @media (max-width: $lg) {
+      padding: 1rem 1.2rem;
+    }
+
+    @media (max-width: $md) {
+      padding: 1rem 0.5rem;
+    }
+  }
+
+  @mixin secondary-menu-item {
+    display: block;
+    font-weight: 400;
+    background-color: $color1;
+    padding: 0.7rem;
+  }
+
+  @mixin secondary-menu-on-hover {
+    ul {
+      display: block;
+
+      li {
+        margin-top: -1rem;
+        opacity: 0;
+
+        animation-name: drop-down;
+        animation-duration: 400ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+        @for $i from 1 through 7 {
+          &:nth-child(#{$i}) {
+            animation-delay: $i * 150ms;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes drop-down {
+    from {
+      margin-top: -1rem;
+      opacity: 0;
+    }
+    to {
+      margin-top: -0.1rem;
+      opacity: 1;
+    }
+  }
+
   .main-menu {
     display: inline-block;
     margin-left: auto;
     margin-right: 0;
 
     ul {
-      list-style-type: none;
-      margin-right: -2rem;
+      @include main-menu-list;
+    }
 
-      @media (max-width: $max-page-width) {
-        margin-right: 0;
+    li {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+
+      a {
+        @include main-menu-link;
       }
 
+      ul {
+        @include secondary-menu-list;
+
+        li {
+          @include secondary-menu-item;
+        }
+      }
+
+      .has-children-icon {
+        margin-left: 0.2rem;
+
+        path {
+          fill: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      @media (hover: hover) {
+        a:hover {
+          color: $white;
+          path {
+            fill: $white;
+          }
+        }
+
+        &:hover {
+          @include secondary-menu-on-hover;
+        }
+      }
+    }
+  }
+
+  $nav-bg-color: lighten($color1, 10);
+  $nav-bg-color-2: saturate(lighten($nav-bg-color, 10), 0);
+
+  .mobile-nav-background-1,
+  .mobile-nav-background-2,
+  .mobile-nav-background-3,
+  .mobile-nav-background-close-button {
+    position: fixed;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+    pointer-events: none;
+    transition: all 400ms ease-in-out;
+  }
+
+  .mobile-nav-background-1 {
+    background-color: $nav-bg-color;
+    z-index: 4;
+
+    &.visible {
+      width: 150vh;
+      height: 150vh;
+      top: -48vh;
+      left: -10vw;
+      transition-delay: 150ms;
+    }
+
+    &.hidden {
+      width: 0vh;
+      height: 0vh;
+      top: 2rem;
+      left: calc(100vw - 2.2rem);
+      transition-delay: 0ms;
+    }
+  }
+
+  .mobile-nav-background-2 {
+    background-color: $nav-bg-color-2;
+    z-index: 3;
+
+    &.visible {
+      width: 150vh;
+      height: 150vh;
+      top: -50vh;
+      left: -30vw;
+      transition-delay: 75ms;
+    }
+
+    &.hidden {
+      width: 0vh;
+      height: 0vh;
+      top: 2rem;
+      left: calc(100vw - 2.2rem);
+      transition-delay: 75ms;
+    }
+  }
+
+  .mobile-nav-background-3 {
+    background-color: $white;
+    opacity: 0.6;
+    z-index: 2;
+    pointer-events: all;
+
+    &.visible {
+      width: 200vh;
+      height: 200vh;
+      top: -50vh;
+      left: -50vw;
+      transition-delay: 0ms;
+    }
+
+    &.hidden {
+      width: 0vh;
+      height: 0vh;
+      top: 2rem;
+      left: calc(100vw - 2.2rem);
+      transition-delay: 150ms;
+    }
+  }
+
+  .mobile-nav-background-close-button {
+    width: 4rem;
+    height: 4rem;
+    transform: translate(-50%, -50%);
+    background-color: $nav-bg-color;
+    z-index: 2;
+    border: 0;
+    margin-top: 0;
+    left: 4.5rem;
+
+    &.visible {
+      bottom: 1rem;
+    }
+
+    &.hidden {
+      bottom: -10rem;
+    }
+
+    .icon {
+      position: absolute;
+      transform: translate(-50%, -50%) scale(2);
+      top: 50%;
+      left: 50%;
+
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 3rem;
+    right: 2rem;
+    transition: all 600ms ease-out;
+    z-index: 4;
+    overflow-y: hidden;
+    width: 100%;
+
+    &.visible {
+      opacity: 1;
+      height: 100vh;
+    }
+
+    &.hidden {
+      opacity: 0;
+      height: 0;
+    }
+
+    .main-menu {
+      margin-left: auto;
+      margin-right: 0;
+      display: block;
+      text-align: right;
+      padding-left: 7rem;
+
       li {
-        display: inline-block;
+        display: block;
+        margin-top: 2.5rem;
 
         a {
-          color: rgba(255, 255, 255, 0.6);
-          text-decoration: none;
-          font-size: 0.9rem;
-          font-family: Poppins, Arial;
-          font-weight: 700;
-          transition: all 300ms;
-          padding: 1rem 2rem;
-
-          @media (max-width: $lg) {
-            padding: 1rem 1.2rem;
-          }
-
-          @media (max-width: $md) {
-            padding: 1rem 0.5rem;
-          }
-
-          @media (hover: hover) {
-            &:hover {
-              color: $white;
-            }
-          }
+          font-size: 1.3rem;
+          color: $white;
         }
       }
     }

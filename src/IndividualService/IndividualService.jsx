@@ -36,6 +36,7 @@ function IndividualService({ service }) {
                 <img
                   src={service.illustration}
                   className="service-illustration"
+                  alt="service illustration"
                 />
               </Col>
             </Hidden>

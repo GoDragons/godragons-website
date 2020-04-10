@@ -1,5 +1,3 @@
-import React from "react";
-
 import LogoDragon from "../assets/godragons_logo_dragon_only_square.png";
 
 import IdeationIllustration from "../assets/godragons-ideation.png";
