@@ -8,14 +8,23 @@ import PageTitle from "../Common/PageTitle/PageTitle";
 import List from "../Common/List/List";
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
 
+import servicesData from "../Data/servicesData";
+
 import "./IndividualService.scss";
 
-function IndividualService({ serviceData }) {
+function IndividualService({ match }) {
+  let service = servicesData.find(
+    (service) => service.slug === match.params.serviceName
+  );
+  if (!service) {
+    return <h1>There is no service with that name</h1>;
+  }
+
   function displayParagraphs() {
-    if (!serviceData.paragraphs) {
+    if (!service.paragraphs) {
       return null;
     }
-    return serviceData.paragraphs.map((paragraph, index) => {
+    return service.paragraphs.map((paragraph, index) => {
       console.log("paragraph = ", paragraph);
       return <p key={index}>{paragraph}</p>;
     });
@@ -23,19 +32,19 @@ function IndividualService({ serviceData }) {
 
   return (
     <div className="service-page prototyping-page">
-      <PageTitle value={serviceData.name} />
+      <PageTitle value={service.name} />
       <div className="service-info">
         <BoxedLayout>
           <Row align="center">
             <Col md={7}>
               {displayParagraphs()}
               <br />
-              <List items={serviceData.bulletPoints} icon="asterisk" />
+              <List items={service.bulletPoints} icon="asterisk" />
             </Col>
             <Hidden xs sm>
               <Col md={5}>
                 <img
-                  src={serviceData.illustration}
+                  src={service.illustration}
                   className="service-illustration"
                 />
               </Col>
@@ -45,7 +54,7 @@ function IndividualService({ serviceData }) {
       </div>
       <div className="pricing-table-container">
         <BoxedLayout>
-          <PricingTable items={serviceData.pricing} />
+          <PricingTable items={service.pricing} />
         </BoxedLayout>
       </div>
     </div>

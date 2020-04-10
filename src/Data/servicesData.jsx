@@ -10,6 +10,7 @@ import SystemDesignIllustration from "../assets/godragons-system-design.png";
 const servicesData = [
   {
     name: "Ideation",
+    slug: "ideation",
     icon: "lightbulb",
     description: "Working with you to envision software solutions to problems.",
     url: "/services/ideation",
@@ -42,6 +43,7 @@ const servicesData = [
   },
   {
     name: "Prototyping",
+    slug: "prototyping",
     icon: "pencil-ruler",
     description:
       "Building the wrong thing is expensive. Creating a prototype to validate assumptions is a fast and cost-effective strategy.",
@@ -92,6 +94,7 @@ const servicesData = [
   },
   {
     name: "Software development",
+    slug: "software-development",
     icon: "laptop-code",
     description:
       "Build web and native apps, backend systems and entire platforms.",
@@ -158,6 +161,7 @@ const servicesData = [
 
   {
     name: "System design",
+    slug: "system-design",
     icon: "project-diagram",
     description:
       "If a picture is worth a thousand words, then a cloud-based systems architecture diagram is worth a million.",
