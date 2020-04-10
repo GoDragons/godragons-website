@@ -54,7 +54,9 @@ function PricingTable({ items }) {
               color="#fefefe"
             />
           ) : null}
-          {item.image ? <img src={item.image} className="icon" /> : null}
+          {item.image ? (
+            <img src={item.image} className="icon" alt="item icon" />
+          ) : null}
         </div>
         <h5 className="name">{item.name}</h5>
         <List items={item.list} />

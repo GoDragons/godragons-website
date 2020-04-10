@@ -21,11 +21,11 @@ function Header() {
     setMobileNavBackgroundIsShowing,
   ] = useState(false);
 
-  function displayChildren(item) {
+  function displayChildren(item, parentSlug) {
     if (!item.children) {
       return null;
     }
-    return displayMenuItemsRecursively(item.children);
+    return displayMenuItemsRecursively(item.children, parentSlug);
   }
 
   function displayLabel(item) {
@@ -41,13 +41,16 @@ function Header() {
     );
   }
 
-  function displayMenuItemsRecursively(level) {
-    const elements = level.map((item) => (
-      <li key={item.slug}>
-        <Link to={`/${item.slug}`}>{displayLabel(item)}</Link>
-        {displayChildren(item)}
-      </li>
-    ));
+  function displayMenuItemsRecursively(level, parentSlug = "") {
+    const elements = level.map((item) => {
+      const currentSlug = `${parentSlug}/${item.slug}`;
+      return (
+        <li key={item.slug}>
+          <Link to={currentSlug}>{displayLabel(item)}</Link>
+          {displayChildren(item, currentSlug)}
+        </li>
+      );
+    });
     return <ul>{elements}</ul>;
   }
 
