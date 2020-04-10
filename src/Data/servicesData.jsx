@@ -13,7 +13,6 @@ const servicesData = [
     slug: "ideation",
     icon: "lightbulb",
     description: "Working with you to envision software solutions to problems.",
-    url: "/services/ideation",
     illustration: IdeationIllustration,
     paragraphs: [
       "GoDragons can help you come up with a concrete plan of action.",
@@ -47,7 +46,6 @@ const servicesData = [
     icon: "pencil-ruler",
     description:
       "Building the wrong thing is expensive. Creating a prototype to validate assumptions is a fast and cost-effective strategy.",
-    url: "/services/prototyping",
     paragraphs: [
       "Creating a prototype to validate assumptions is a fast and cost-effective strategy to avoid making expensive mistakes.",
       "By starting the development process with a prototype, we get input from users and stakeholders very early on, which shapes the design process. Fast feedback is essential to success.",
@@ -98,7 +96,6 @@ const servicesData = [
     icon: "laptop-code",
     description:
       "Build web and native apps, backend systems and entire platforms.",
-    url: "/services/software-development",
     paragraphs: [
       "GoDragons offers full software development services, from building web and native apps to backend systems and entire platforms.",
       "We have a strong focus on delivering high quality and reliable software, on time.",
@@ -165,7 +162,6 @@ const servicesData = [
     icon: "project-diagram",
     description:
       "If a picture is worth a thousand words, then a cloud-based systems architecture diagram is worth a million.",
-    url: "/services/system-design",
     paragraphs: [
       "GoDragons architects cloud-based apps and platforms. Anything from serverless to real-time, event-driven systems.",
       "The emphasis is on keeping costs low by using native cloud offerings. This strategy lowers the overall cost of development and increases reliability.",

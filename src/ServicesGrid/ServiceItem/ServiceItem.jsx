@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./ServiceItem.scss";
 
-function ServiceItem({ name, description, icon, url }) {
+function ServiceItem({ name, description, icon, slug }) {
   return (
     <div className="service-item">
       <h4 className="name">{name}</h4>
@@ -14,7 +14,7 @@ function ServiceItem({ name, description, icon, url }) {
         <FontAwesomeIcon icon={icon} />
       </div>
       <p className="description">{description}</p>
-      <Link to={url}>
+      <Link to={`/services/${slug}`}>
         Learn more <FontAwesomeIcon icon="angle-right" />
       </Link>
     </div>
