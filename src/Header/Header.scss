@@ -14,6 +14,7 @@ header {
     width: 100%;
     flex-direction: row;
     align-items: center;
+    z-index: 1;
   }
 
   .desktop-header {
@@ -100,16 +101,16 @@ header {
         text-align: left;
         display: none;
         position: absolute;
-        padding: 0.7rem;
+
         padding-top: 1.7rem;
-        background-color: $color1;
-        top: 2rem;
-        left: -0.7rem;
+        padding-left: 0;
+        top: 1.5rem;
 
         li {
           display: block;
-          margin-bottom: 1rem;
           font-weight: 400;
+          background-color: $color1;
+          padding: 0.7rem;
         }
       }
 
@@ -126,8 +127,36 @@ header {
         }
       }
 
+      @keyframes drop-down {
+        from {
+          margin-top: -1rem;
+          opacity: 0;
+        }
+        to {
+          margin-top: -0.1rem;
+          opacity: 1;
+        }
+      }
+
       @media (hover: hover) {
         &:hover {
+          li {
+            margin-top: -1rem;
+            opacity: 0;
+
+            animation-name: drop-down;
+            animation-duration: 400ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+
+            @for $i from 1 through 7 {
+              &:nth-child(#{$i}) {
+                animation-delay: $i * 150ms;
+                z-index: -$i - 1;
+                position: relative;
+              }
+            }
+          }
           ul {
             display: block;
           }
