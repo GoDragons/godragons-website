@@ -20,6 +20,8 @@ import CaseStudyHiitTribe from "../CaseStudies/CaseStudyHiitTribe/CaseStudyHiitT
 
 import ScrollToTop from "../Common/ScrollToTop/ScrollToTop";
 
+import servicesData from "../Data/servicesData";
+
 function App() {
   return (
     <Router>
@@ -53,9 +55,13 @@ function App() {
           <Route exact path="/case-studies/hiit-tribe">
             <CaseStudyHiitTribe />
           </Route>
-          <Route exact path="/services/:serviceName">
-            <IndividualService />
-          </Route>
+          {servicesData.map((service, index) => {
+            return (
+              <Route exact path={`/services/${service.slug}`} key={index}>
+                <IndividualService service={service} />
+              </Route>
+            );
+          })}
         </Switch>
         <Footer />
       </ScrollToTop>

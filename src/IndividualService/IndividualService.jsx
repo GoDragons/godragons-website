@@ -8,24 +8,14 @@ import PageTitle from "../Common/PageTitle/PageTitle";
 import List from "../Common/List/List";
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
 
-import servicesData from "../Data/servicesData";
-
 import "./IndividualService.scss";
 
-function IndividualService({ match }) {
-  let service = servicesData.find(
-    (service) => service.slug === match.params.serviceName
-  );
-  if (!service) {
-    return <h1>There is no service with that name</h1>;
-  }
-
+function IndividualService({ service }) {
   function displayParagraphs() {
     if (!service.paragraphs) {
       return null;
     }
     return service.paragraphs.map((paragraph, index) => {
-      console.log("paragraph = ", paragraph);
       return <p key={index}>{paragraph}</p>;
     });
   }
