@@ -41,7 +41,6 @@ function PricingTable({ items }) {
   }
 
   function displayItems() {
-    console.log(items);
     if (!items) {
       return null;
     }
