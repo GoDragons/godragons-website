@@ -115,6 +115,21 @@ function Header() {
     return (
       <>
         <aside
+          className={cx("mobile-nav-background-simple", {
+            visible: mobileNavBackgroundIsShowing,
+            hidden: !mobileNavBackgroundIsShowing,
+          })}
+        />
+        <button
+          className={cx("mobile-nav-background-close-button-simple", {
+            visible: mobileNavBackgroundIsShowing,
+            hidden: !mobileNavBackgroundIsShowing,
+          })}
+          onClick={hideMobileNav}
+        >
+          <FontAwesomeIcon icon="times" className="icon" color="#fefefe" />
+        </button>
+        {/* <aside
           className={cx("mobile-nav-background-1", {
             visible: mobileNavBackgroundIsShowing,
             hidden: !mobileNavBackgroundIsShowing,
@@ -134,8 +149,8 @@ function Header() {
             hidden: !mobileNavBackgroundIsShowing,
           })}
           onClick={hideMobileNav}
-        />
-        <button
+        /> 
+         <button
           className={cx("mobile-nav-background-close-button", {
             visible: mobileNavBackgroundIsShowing,
             hidden: !mobileNavBackgroundIsShowing,
@@ -143,7 +158,7 @@ function Header() {
           onClick={hideMobileNav}
         >
           <FontAwesomeIcon icon="times" className="icon" color="#fefefe" />
-        </button>
+        </button> */}
 
         <div
           className={cx("mobile-nav", {
