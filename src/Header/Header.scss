@@ -142,6 +142,7 @@ header {
     display: inline-block;
     margin-left: auto;
     margin-right: 0;
+    overflow-y: auto;
 
     ul {
       @include main-menu-list;
@@ -189,6 +190,64 @@ header {
 
   $nav-bg-color: lighten($color1, 10);
   $nav-bg-color-2: saturate(lighten($nav-bg-color, 10), 0);
+
+  /* to be removed when we go back to the "good" mobile nav*/
+  .mobile-nav-background-simple {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 400ms ease-in-out;
+    background-color: $color1;
+    z-index: 2;
+    pointer-events: none;
+
+    &.visible {
+      opacity: 1;
+    }
+    &.hidden {
+      opacity: 0;
+    }
+  }
+
+  .mobile-nav-background-close-button-simple {
+    position: fixed;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+    transition: all 400ms ease-in-out;
+    outline: 0;
+
+    width: 4rem;
+    height: 4rem;
+
+    background-color: $nav-bg-color;
+    background-color: transparent;
+    z-index: 4;
+    border: 0;
+    margin-top: 0;
+    top: 2.5rem;
+    right: -2rem;
+
+    &.visible {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    &.hidden {
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    .icon {
+      position: absolute;
+      transform: translate(-50%, -50%) scale(2);
+      top: 50%;
+      left: 50%;
+
+      path {
+        fill: white;
+      }
+    }
+  }
 
   .mobile-nav-background-1,
   .mobile-nav-background-2,
@@ -321,10 +380,18 @@ header {
       display: block;
       text-align: right;
       padding-left: 7rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      max-height: calc(100vh - 6rem);
 
       li {
         display: block;
         margin-top: 2.5rem;
+        margin-right: -0.5rem;
+
+        @media (max-height: 500px) {
+          margin-top: 1.2rem;
+        }
 
         a {
           font-size: 1.3rem;
