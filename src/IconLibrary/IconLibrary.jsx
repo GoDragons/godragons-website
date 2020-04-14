@@ -1,4 +1,6 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 import {
   faLightbulb,
   faCloud,
@@ -14,6 +16,8 @@ import {
   faCheck,
   faBars,
   faAsterisk,
+  faMapMarkerAlt,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -30,5 +34,9 @@ library.add(
   faCheckCircle,
   faCheck,
   faBars,
-  faAsterisk
+  faAsterisk,
+  faMapMarkerAlt,
+  faEnvelope,
+  faTwitter,
+  faLinkedin
 );
