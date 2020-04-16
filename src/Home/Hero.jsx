@@ -15,8 +15,8 @@ export default function Hero() {
           <Col md={7}>
             <h1>Solve real business problems with technology</h1>
             <p className="tagline">
-              We use React, Node.js and Go to build apps and platforms and
-              deploy them on AWS and Google Cloud Platform
+              We build apps and platforms in AWS and Google Cloud using React,
+              Node.js and Go
             </p>
             <Link to="/contact">
               <Button type="primary" label="Get in touch" />
