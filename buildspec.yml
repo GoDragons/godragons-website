@@ -43,7 +43,7 @@ phases:
 # file-format: CucumberJson # default is JunitXml
 artifacts:
   files:
-    - build/
+    - build/**/*
   discard-paths: no
 # cache:
 #   paths:
