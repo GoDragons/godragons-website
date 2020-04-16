@@ -10,7 +10,7 @@ import "./ServicesGrid.scss";
 
 export default function ServicesGrid() {
   const columnElements = services.map((service, index) => (
-    <Col lg={4} md={6} sm={12} key={index}>
+    <Col lg={6} md={6} sm={12} key={index}>
       <ServiceItem {...service} />
     </Col>
   ));

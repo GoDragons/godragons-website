@@ -26,7 +26,7 @@
       border: 2px solid $color2;
 
       &::placeholder {
-        color: $darkGray;
+        color: saturate(darken($color2, 30), 30);
       }
     }
   }
