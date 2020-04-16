@@ -17,7 +17,7 @@ const servicesData = [
       "Together we distill the problem and identify the best approach to solve it. Finally, we envision solutions that can turn your ideas into a reality.",
     ],
     bulletPoints: [
-      "We offer structured, 4-hour workshops. (Remotely, due to the coronavirus outbreak)",
+      "We offer structured, 4-hour workshops. (Remotely, due to the coronavirus pandemic)",
       "During the sessions, we identify key Risks, Assumptions, Issues and Dependencies.",
       "Typically, we devise an outline for a solution in 2 workshops (depending on the size and complexity of the problem).",
     ],
