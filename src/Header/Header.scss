@@ -142,7 +142,6 @@ header {
     display: inline-block;
     margin-left: auto;
     margin-right: 0;
-    overflow-y: auto;
 
     ul {
       @include main-menu-list;
@@ -383,6 +382,7 @@ header {
       margin-top: 0;
       margin-bottom: 0;
       max-height: calc(100vh - 6rem);
+      overflow-y: auto;
 
       li {
         display: block;
