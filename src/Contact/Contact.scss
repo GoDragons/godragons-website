@@ -11,10 +11,19 @@
     transition: font-size 400ms;
   }
 
+  @media (max-width: 600px) {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
   .inner-container {
     display: flex;
     justify-content: center;
     width: 100%;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
   }
 
   h1 {
@@ -29,6 +38,15 @@
 
       &:not(:first-child) {
         margin-top: -0.5rem;
+      }
+
+      @media (max-width: 600px) {
+        display: inline-block;
+        margin-bottom: 1rem;
+
+        &:not(:first-child) {
+          margin-left: 0.5rem;
+        }
       }
     }
 
@@ -57,6 +75,12 @@
       width: 50%;
     }
 
+    @media (max-width: 600px) {
+      background-color: $white;
+      width: 100%;
+      padding: 1.5rem;
+    }
+
     .form-content {
       border-radius: 0.6rem;
       position: relative;
@@ -65,6 +89,10 @@
 
       .form-title-container {
         margin-bottom: 2vw;
+      }
+
+      @media (max-width: 600px) {
+        padding-top: 0;
       }
     }
 
@@ -78,12 +106,16 @@
       width: 130%;
       height: 100%;
       z-index: 1;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
 
     .input-group {
       display: flex;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
 
       input,
       textarea {
@@ -95,6 +127,14 @@
         width: 100%;
         height: 2rem;
         outline: unset;
+        -webkit-appearance: none;
+        font-weight: 700;
+
+        &::placeholder {
+          font-size: 0.9rem;
+          line-height: 1.5rem;
+          font-weight: 400;
+        }
 
         &:focus {
           border: 2px solid $color2;
@@ -115,6 +155,10 @@
     .button-container {
       display: flex;
       justify-content: flex-end;
+
+      @media (max-width: 600px) {
+        justify-content: center;
+      }
     }
   }
   .contact-details-container {
@@ -125,6 +169,13 @@
 
     @media (max-width: $md) {
       width: 50%;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 0;
+      top: 0;
+      margin-top: 1rem;
     }
 
     a {
@@ -186,12 +237,22 @@
           }
         }
       }
+
+      @media (max-width: 600px) {
+        display: flex;
+        justify-content: flex-start;
+      }
     }
 
     .contact-details-content {
       border-radius: 10px;
       position: relative;
       z-index: 4;
+
+      @media (max-width: 600px) {
+        background-color: $color1;
+        padding: 1.5rem;
+      }
     }
 
     &::before {
@@ -204,6 +265,10 @@
       width: 100%;
       height: 100%;
       z-index: 3;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
 
     h1,
