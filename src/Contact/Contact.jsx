@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Row, Col, Hidden } from "react-grid-system";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -40,86 +39,89 @@ function Contact() {
         <div className="inner-container">
           <form onSubmit={submitForm} className="form">
             <div className="form-content">
+              <div className="form-title-container">
+                <h2 className="form-header">
+                  <span className="line">SEND US</span>
+                  <span className="line">A MESSAGE</span>
+                </h2>
+                <div className="full-stop"></div>
+              </div>
               <div className="input-group">
-                <label>First Name*</label>
                 <input
+                  placeholder="First Name*"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
               <div className="input-group">
-                <label>Last Name*</label>
                 <input
+                  placeholder="Last Name*"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                 />
               </div>
               <div className="input-group">
-                <label>Email address*</label>
                 <input
+                  placeholder="Email address*"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className="input-group">
-                <label>
-                  Tell us about your business and requirements of a new project
-                  you want to start with us!
-                </label>
+              <div className="input-group message-content">
                 <textarea
+                  placeholder="Tell us about your business and requirements of a new project you want to start with us!"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
-              <button type="submit">SEND TO US!</button>
+              <div className="button-container">
+                <button type="submit">SEND TO US!</button>
+              </div>
             </div>
           </form>
           <div className="contact-details-container">
             <div className="contact-details-content">
-              <h2>Contact Us</h2>
+              <h2>CONTACT US</h2>
               <div className="full-stop"></div>
-              <p>
+              <p className="subtitle">
                 Want to find out more?
                 <br />
                 Fill out the form and we can book a free consultation.
               </p>
-              <Row align="center">
-                <Col xl={1} lg={1}>
-                  <FontAwesomeIcon className="icon" icon="map-marker-alt" />
-                </Col>
-                <Col xl={11} lg={11}>
-                  <h4>London City</h4>
-                  <p>The Hop Exchange 24 Southwark St London SE1 1TY</p>
-                </Col>
-              </Row>
-              <Row align="center">
-                <Col xl={1} lg={1}>
-                  <FontAwesomeIcon icon="envelope" />
-                </Col>
-                <Col xl={11} lg={11}>
-                  <p>contact@godragons.com</p>
-                </Col>
-              </Row>
-              <Row align="center">
-                <Col xl={1} lg={1}>
-                  <FontAwesomeIcon icon="envelope" />
-                </Col>
-                <Col xl={11} lg={11}>
-                  <p>contact@godragons.com</p>
-                </Col>
-              </Row>
-              <Row align="center">
-                <Col xl={1} lg={1}>
-                  <a href="https://www.linkedin.com/company/godragons">
-                    <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                  </a>
-                </Col>
-                <Col xl={1} lg={1}>
-                  <a href="https://twitter.com/GoDragonsTech">
-                    <FontAwesomeIcon icon={["fab", "twitter"]} />
-                  </a>
-                </Col>
-              </Row>
+              <div className="location-info">
+                <div className="row">
+                  <div className="icon-column">
+                    <FontAwesomeIcon className="icon" icon="map-marker-alt" />
+                  </div>
+                  <div className="info-column">
+                    <h4>London City</h4>
+                    <p>The Hop Exchange 24 Southwark St London SE1 1TY</p>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="icon-column">
+                    <FontAwesomeIcon className="icon" icon="envelope" />
+                  </div>
+                  <div className="info-column">
+                    <p>contact@godragons.com</p>
+                  </div>
+                </div>
+              </div>
+              <div className="social-icons-container">
+                <a href="https://www.linkedin.com/company/godragons">
+                  <FontAwesomeIcon
+                    className="icon"
+                    icon={["fab", "linkedin"]}
+                  />
+                </a>
+
+                <a href="https://twitter.com/GoDragonsTech">
+                  <FontAwesomeIcon className="icon" icon={["fab", "twitter"]} />
+                </a>
+                <a href="https://github.com/GoDragons">
+                  <FontAwesomeIcon className="icon" icon={["fab", "github"]} />
+                </a>
+              </div>
             </div>
           </div>
         </div>

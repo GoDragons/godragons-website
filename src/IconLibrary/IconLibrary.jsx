@@ -1,5 +1,9 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faTwitter,
+  faLinkedin,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 import {
   faLightbulb,
@@ -38,5 +42,6 @@ library.add(
   faMapMarkerAlt,
   faEnvelope,
   faTwitter,
-  faLinkedin
+  faLinkedin,
+  faGithub
 );
