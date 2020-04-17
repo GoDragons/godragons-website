@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
+import Button from "../Common/Button/Button";
 
 import axios from "axios";
 
@@ -75,7 +76,7 @@ function Contact() {
                 />
               </div>
               <div className="button-container">
-                <button type="submit">SEND TO US!</button>
+                <Button type="secondary" label="SUBMIT" />
               </div>
             </div>
           </form>

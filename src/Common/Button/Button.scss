@@ -14,6 +14,38 @@ button {
   transition: all 400ms;
   transform: scale(1);
   user-select: none;
+  outline: unset;
+
+  @keyframes scale {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @mixin focus-state($buttonColor) {
+    color: darken($buttonColor, 40);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: 2px;
+      border-bottom: 2px solid $buttonColor;
+
+      animation-name: scale;
+      animation-duration: 400ms;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+
+      transform: scale(0);
+    }
+  }
 
   @media (hover: hover) {
     &:hover {
@@ -27,15 +59,24 @@ button {
   }
 
   &.primary {
-    border: 1px solid $color3;
+    border: 2px solid $color3;
     background-color: $color3;
     color: $white;
+    position: relative;
+
+    &:focus {
+      @include focus-state($color3);
+    }
   }
 
   &.secondary {
     background-color: $color2;
-    border: 1px solid $color2;
+    border: 2px solid $color2;
     color: $white;
+
+    &:focus {
+      @include focus-state($color2);
+    }
   }
 
   &.linkedin {
