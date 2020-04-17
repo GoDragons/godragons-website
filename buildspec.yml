@@ -45,7 +45,7 @@ artifacts:
   files:
     - ./**/*
   base-directory: "build"
-  discard-paths: yes
+  discard-paths: no
 # cache:
 #   paths:
 #     - "/root/.m2/**/*"
