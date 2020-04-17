@@ -40,10 +40,10 @@ function Contact() {
           <form onSubmit={submitForm} className="form">
             <div className="form-content">
               <div className="form-title-container">
-                <h2 className="form-header">
+                <h1 className="form-header">
                   <span className="line">SEND US</span>
                   <span className="line">A MESSAGE</span>
-                </h2>
+                </h1>
                 <div className="full-stop"></div>
               </div>
               <div className="input-group">
@@ -81,7 +81,7 @@ function Contact() {
           </form>
           <div className="contact-details-container">
             <div className="contact-details-content">
-              <h2>CONTACT US</h2>
+              <h1>CONTACT US</h1>
               <div className="full-stop"></div>
               <p className="subtitle">
                 Want to find out more?
