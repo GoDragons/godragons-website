@@ -6,7 +6,7 @@ header {
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 5;
 
   .desktop-header,
   .mobile-header {
@@ -14,7 +14,6 @@ header {
     width: 100%;
     flex-direction: row;
     align-items: center;
-    z-index: 1;
   }
 
   .desktop-header {
