@@ -40,6 +40,10 @@ $priceColor: darken(saturate($titleColor, 50), 20);
       padding-bottom: 2rem;
       box-shadow: 0rem 0.5rem 2rem darken($color3, 10);
       padding-top: 2rem;
+
+      .discount-tag {
+        top: -1.5rem;
+      }
     }
   }
 }
@@ -73,6 +77,10 @@ $priceColor: darken(saturate($titleColor, 50), 20);
 
       &:not(:first-child) {
         border-left: 1px solid $gray;
+      }
+
+      .discount-tag {
+        top: -2.2rem;
       }
 
       .icon-container {
