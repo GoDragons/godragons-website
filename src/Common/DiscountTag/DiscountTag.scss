@@ -1,0 +1,36 @@
+@import "../../variables";
+
+.discount-tag {
+  background-color: $discountColor;
+  color: $white;
+  width: 100px;
+  position: absolute;
+  padding-top: 1rem;
+  right: 1rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 50px 0 50px;
+    border-color: $discountColor transparent transparent transparent;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+  }
+
+  .line {
+    display: block;
+    color: $white;
+    font-weight: 900;
+    letter-spacing: -2px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .line2 {
+    margin-bottom: 1rem;
+  }
+}

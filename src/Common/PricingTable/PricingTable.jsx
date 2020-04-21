@@ -6,18 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import cx from "classnames";
 
 import List from "../List/List";
+import DiscountTag from "../DiscountTag/DiscountTag";
 
 function PricingTable({ items }) {
   function displayPrice(item) {
-    let currencyLeftElement = null;
-    let currencyRightElement = null;
     let priceFrequencyElement = null;
-
-    if (item.currency && item.currencyPosition === "left") {
-      currencyLeftElement = item.currency;
-    } else if (item.currency && item.currencyPosition === "right") {
-      currencyRightElement = item.currency;
-    }
 
     if (item.priceFrequency) {
       priceFrequencyElement = (
@@ -26,18 +19,35 @@ function PricingTable({ items }) {
     }
 
     let priceElement = (
-      <h2 className="price">
-        {currencyLeftElement}
-        {item.priceAmount}
-        {currencyRightElement}
-      </h2>
+      <div className="price-container">
+        <h2 className={cx("price", { "old-price": item.discount })}>
+          {item.price}
+        </h2>
+      </div>
     );
+    let newPriceElement;
+    if (item.discount) {
+      newPriceElement = (
+        <div className="new-price-container">
+          <h2 className="new-price">{item.discount.newPrice}</h2>
+        </div>
+      );
+    }
     return (
       <>
         {priceElement}
         {priceFrequencyElement}
+        {newPriceElement}
       </>
     );
+  }
+
+  function displayDiscountTag(item) {
+    if (item.discount) {
+      return (
+        <DiscountTag line1={item.discount.line1} line2={item.discount.line2} />
+      );
+    }
   }
 
   function displayItems() {
@@ -46,6 +56,7 @@ function PricingTable({ items }) {
     }
     return items.map((item, index) => (
       <li className="item" key={index}>
+        {displayDiscountTag(item)}
         <div className="icon-container ">
           {item.icon ? (
             <FontAwesomeIcon
