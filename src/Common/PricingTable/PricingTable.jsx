@@ -21,7 +21,7 @@ function PricingTable({ items }) {
     let priceElement = (
       <div className="price-container">
         <h2 className={cx("price", { "old-price": item.discount })}>
-          {item.priceAmount}
+          {item.price}
         </h2>
       </div>
     );
