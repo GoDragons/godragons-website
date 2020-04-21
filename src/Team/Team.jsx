@@ -8,7 +8,7 @@ import Separator from "../Common/Separator/Separator";
 
 import { withRouter } from "react-router-dom";
 
-import teamData from "./teamData.json";
+import teamData from "./teamData.jsx";
 
 import "./Team.scss";
 
