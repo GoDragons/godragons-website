@@ -13,8 +13,7 @@ export default function DiscountTag({ line1, line2 }) {
   }
 
   if (line2) {
-    // line2FontSize = TAG_WIDTH / line2.length / 9 + "rem";
-    line2FontSize = "1.38rem";
+    line2FontSize = TAG_WIDTH / line2.length / 9 + "rem";
   }
 
   return (
