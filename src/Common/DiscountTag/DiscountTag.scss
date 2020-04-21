@@ -21,16 +21,6 @@
     left: 0;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -0.5rem;
-    height: 1px;
-    background-color: transparent;
-    width: calc(100% + 1rem);
-  }
-
   .line {
     display: block;
     color: $white;
