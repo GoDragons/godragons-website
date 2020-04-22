@@ -40,9 +40,13 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 
-    text-align: justify;
     span {
       letter-spacing: 0;
+
+      b {
+        font-weight: 700;
+        font-family: Poppins;
+      }
     }
   }
 
@@ -60,5 +64,28 @@
     width: 100%;
     margin-top: 3rem;
     text-align: center;
+  }
+
+  @media (max-width: $xs) {
+    .author {
+      font-size: 1.2rem;
+      padding: 0 2rem;
+      text-align: left;
+      margin-top: 1rem;
+    }
+    .title {
+      font-size: 1.5rem;
+      letter-spacing: 0;
+    }
+    .message-container {
+      .message {
+        padding-top: 0;
+        padding: 0 2rem;
+      }
+      .quote-start,
+      .quote-end {
+        font-size: 6rem;
+      }
+    }
   }
 }
