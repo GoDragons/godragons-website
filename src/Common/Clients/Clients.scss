@@ -1,0 +1,16 @@
+@import "../../variables";
+
+.clients {  
+  padding-top: 2rem;
+  text-align: center;
+  .title {
+    width: 100%;
+  }
+
+  img {
+    margin: 3rem;
+    @media (max-width: $sm) {
+      margin: 2rem;
+    }
+  }
+}
