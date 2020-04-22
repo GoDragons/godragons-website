@@ -3,7 +3,7 @@
 .thumbnail-container {
   margin-top: 0rem;
   margin-bottom: 2rem;
-  padding: 10rem 1rem;
+  padding: 7rem 1rem;
   width: 100%;
   cursor: pointer;
   position: relative;
@@ -32,12 +32,13 @@
   }
 
   .title {
-    font-size: 5rem;
-    letter-spacing: -3px;
+    letter-spacing: 1px;
   }
 
   .subtitle {
-    font-size: 2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0;
   }
 
   @media (max-width: $md) {

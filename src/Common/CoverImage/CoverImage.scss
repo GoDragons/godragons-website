@@ -13,8 +13,9 @@
     color: $white;
     width: 100%;
     text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.5);
-    font-size: 5rem;
-    letter-spacing: -5px;
+    font-size: 3rem;
+    letter-spacing: -1px;
+    font-weight: 600;
   }
 
   @media (max-width: $md) {
