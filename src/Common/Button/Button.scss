@@ -70,12 +70,12 @@ button {
   }
 
   &.secondary {
-    background-color: $color2;
-    border: 2px solid $color2;
+    background-color: $color1;
+    border: 2px solid $color1;
     color: $white;
 
     &:focus {
-      @include focus-state($color2);
+      @include focus-state($color1);
     }
   }
 

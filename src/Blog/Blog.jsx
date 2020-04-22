@@ -25,12 +25,8 @@ function Blog() {
           return (
             <Link key={index} to={`/blog/${post.slug}`}>
               <div className="post">
-                <h4>
-                  <FontAwesomeIcon
-                    icon="bullseye"
-                    className="icon"
-                    color="#fefefe"
-                  />
+                <h4 className="title">
+                  <FontAwesomeIcon icon="bullseye" className="icon" />
                   {post.title}
                 </h4>
                 <p>{post.abstract}</p>

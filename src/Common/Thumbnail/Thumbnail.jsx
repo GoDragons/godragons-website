@@ -10,7 +10,7 @@ function Thumbnail({ img, title, subtitle, className, to }) {
   let subtitleElement = null;
 
   if (title) {
-    titleElement = <h1 className="title">{title}</h1>;
+    titleElement = <h2 className="title">{title}</h2>;
   }
 
   if (subtitle) {

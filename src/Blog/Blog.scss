@@ -36,6 +36,7 @@
     margin-top: 2.5rem;
     transition: all 400ms;
     background-color: rgba(255, 255, 255, 0);
+
     * {
       transition: all 400ms;
     }
@@ -44,11 +45,24 @@
       font-size: 1.1rem;
     }
 
+    .icon {
+      transform: scale(0.7);
+      position: relative;
+      top: 1px;
+
+      path {
+        fill: $color1;
+      }
+    }
+
+    .title {
+      color: $color1;
+    }
+
     .meta-container {
       margin-top: -1.5rem;
 
       p {
-        // font-family: Poppins, Arial;
         color: $color1;
         font-size: 0.85rem;
         letter-spacing: 0;
@@ -56,7 +70,7 @@
 
       .author p,
       .date p {
-        color: $color4;
+        color: $color2;
       }
 
       .date {
@@ -67,7 +81,10 @@
     @media (hover: hover) {
       &:hover {
         * {
-          color: $color4;
+          color: $color2;
+          path {
+            fill: $color2;
+          }
         }
       }
     }
