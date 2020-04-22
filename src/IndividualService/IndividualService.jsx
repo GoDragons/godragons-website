@@ -5,6 +5,8 @@ import { Row, Col, Hidden } from "react-grid-system";
 
 import PricingTable from "../Common/PricingTable/PricingTable";
 import PageTitle from "../Common/PageTitle/PageTitle";
+import Thumbnail from "../Common/Thumbnail/Thumbnail";
+
 import List from "../Common/List/List";
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
 
@@ -18,6 +20,24 @@ function IndividualService({ service }) {
     return service.paragraphs.map((paragraph, index) => {
       return <p key={index}>{paragraph}</p>;
     });
+  }
+
+  function displayCaseStudy() {
+    if (!service.caseStudy) {
+      return null;
+    }
+
+    return (
+      <div>
+        <BoxedLayout>
+          <PageTitle value="Case Study" />
+          <Thumbnail {...service.caseStudy} />
+          <br />
+          <br />
+          <br />
+        </BoxedLayout>
+      </div>
+    );
   }
 
   return (
@@ -48,6 +68,7 @@ function IndividualService({ service }) {
           <PricingTable items={service.pricing} />
         </BoxedLayout>
       </div>
+      {displayCaseStudy()}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import IdeationIllustration from "../assets/godragons-ideation.png";
 import PrototypingIllustration from "../assets/godragons-prototyping.jpg";
 import SoftwareDevelopmentIllustration from "../assets/godragons-software-development.png";
 import SystemDesignIllustration from "../assets/godragons-system-design.png";
+import GymPhoto from "../assets/godragons-gym-4.jpg";
 
 const servicesData = [
   {
@@ -112,47 +113,30 @@ const servicesData = [
       "We use modern practices including automated testing and continuous deployment.",
       "Our main programming languages are Go (golang), JavaScript (React and node), and Python.",
     ],
+    caseStudy: {
+      title: "HIIT Tribe",
+      subtitle: "Using software to create a new kind of workout experience",
+      img: GymPhoto,
+      to: "/case-studies/hiit-tribe",
+    },
     illustration: SoftwareDevelopmentIllustration,
     pricing: [
       {
-        name: "Small",
+        name: "Agile Development",
         list: [
-          "Up to 3 months",
-          "Includes ideation process",
-          "Demo every 1-2 weeks",
-          "Up to 3 milestones",
-        ],
-        price: "£10k-£20k",
-        priceFrequency: null,
-        image: LogoDragon,
-      },
-      {
-        name: "Regular",
-        list: [
-          "3 months",
-          "Includes static prototype",
-          "Includes ideation process",
-          "Dedicated team",
           "Demo every 2 weeks",
+          "Fixed cost per milestone",
           "Milestone every month",
+          "Invoice for every milestone",
         ],
-        price: "£40k-£60k",
-        priceFrequency: null,
+        price: "£60",
+        priceFrequency: "per hour per developer",
         image: LogoDragon,
-      },
-      {
-        name: "Large",
-        list: [
-          "6 months",
-          "Includes dynamic prototype",
-          "Includes ideation process",
-          "Dedicated team",
-          "Demo every 2 weeks",
-          "Milestone every month",
-        ],
-        price: "£80k-£120k",
-        priceFrequency: null,
-        image: LogoDragon,
+        discount: {
+          newPrice: "£30",
+          line1: "50%",
+          line2: "discount",
+        },
       },
     ],
   },
