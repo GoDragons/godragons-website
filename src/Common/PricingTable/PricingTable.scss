@@ -37,7 +37,7 @@ $priceColor: darken(saturate($titleColor, 50), 20);
       margin-bottom: 2rem;
       background-color: white;
       border-radius: 0.8rem;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
       box-shadow: 0rem 0.5rem 2rem darken($color3, 10);
       padding-top: 2rem;
 
@@ -51,7 +51,6 @@ $priceColor: darken(saturate($titleColor, 50), 20);
 .pricing-table-container {
   background-color: $color3;
   width: 100%;
-  padding-top: $tableHorizontalPadding1;
   padding-bottom: $tableHorizontalPadding1;
 
   .pricing-table {
@@ -70,7 +69,7 @@ $priceColor: darken(saturate($titleColor, 50), 20);
       padding-left: 1rem;
       padding-right: 1rem;
       padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-bottom: 0rem;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -84,10 +83,10 @@ $priceColor: darken(saturate($titleColor, 50), 20);
       }
 
       .icon-container {
-        margin-bottom: 2rem;
         position: relative;
-        margin-top: 2rem;
-        margin-bottom: 4rem;
+        margin-top: 0rem;
+        margin-bottom: 3rem;
+        transform: scale(0.8);
 
         &::before {
           position: absolute;
@@ -136,8 +135,8 @@ $priceColor: darken(saturate($titleColor, 50), 20);
       }
 
       .list {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         padding-left: 1rem;
         padding-right: 1rem;
 
@@ -204,6 +203,7 @@ $priceColor: darken(saturate($titleColor, 50), 20);
 
       .price-frequency {
         margin-top: 0rem;
+        margin-bottom: 0;
         font-size: 1.1rem;
         color: $titleColor;
         font-weight: 400;

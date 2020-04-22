@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import cx from "classnames";
 
 import List from "../List/List";
+import PageTitle from "../PageTitle/PageTitle";
 import DiscountTag from "../DiscountTag/DiscountTag";
 
 function PricingTable({ items }) {
@@ -36,8 +37,8 @@ function PricingTable({ items }) {
     return (
       <>
         {priceElement}
-        {priceFrequencyElement}
         {newPriceElement}
+        {priceFrequencyElement}
       </>
     );
   }
@@ -80,6 +81,7 @@ function PricingTable({ items }) {
 
   return (
     <div className="pricing-table-container">
+      <PageTitle value="Pricing" color="light" />
       <ul className={className}>{displayItems()}</ul>
     </div>
   );

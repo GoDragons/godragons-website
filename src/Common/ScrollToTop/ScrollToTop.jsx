@@ -3,8 +3,11 @@ import { withRouter } from "react-router-dom";
 
 class ScrollToTop extends Component {
   componentDidUpdate(prevProps) {
+    // when the path changes, scroll to the top
     if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0);
+      // we have to scroll the #root element instead of the whole window, because its
+      // direct parent (the body element) has overflow: auto and height: 100vh
+      document.querySelector("#root").scrollTo(0, 0);
     }
   }
 

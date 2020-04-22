@@ -12,7 +12,7 @@ const headerData = [
     ],
   },
   {
-    label: "Services",
+    label: "Services & Pricing",
     slug: "services",
     children: servicesData.map((service) => ({
       label: service.name,

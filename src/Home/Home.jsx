@@ -24,7 +24,7 @@ function Home() {
       <Testimonial {...hiitTribeTestimonial} />
       <WhoAreWe />
 
-      <div className="purple segment">
+      <div className="purple segment services">
         <BoxedLayout>
           <ServicesGrid />
         </BoxedLayout>

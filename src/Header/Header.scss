@@ -59,10 +59,15 @@ header {
 
   @mixin main-menu-list {
     list-style-type: none;
-    margin-right: -2rem;
+    margin-right: -2.5rem;
+    padding-left: 0;
     display: block;
 
     @media (max-width: $max-page-width) {
+      margin-right: -1rem;
+    }
+
+    @media (max-width: $sm) {
       margin-right: 0;
     }
   }
@@ -92,7 +97,8 @@ header {
     }
 
     @media (max-width: $md) {
-      padding: 1rem 0.5rem;
+      padding: 1rem 0.9rem;
+      font-size: 0.8rem;
     }
   }
 
@@ -168,6 +174,12 @@ header {
 
         path {
           fill: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      @media (hover: none) {
+        .has-children-icon {
+          display: none;
         }
       }
 

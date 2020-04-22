@@ -19,4 +19,10 @@
   @media (max-width: $md) {
     margin: 2rem auto;
   }
+
+  &.light {
+    .title {
+      color: $white;
+    }
+  }
 }
