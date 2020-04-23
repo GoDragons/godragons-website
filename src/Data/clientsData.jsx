@@ -8,27 +8,27 @@ const clientsData = [
   {
     name: "Shell",
     img: ShellLogo,
-    height: 50,
+    height: "50px",
   },
   {
     name: "Holland & Barrett",
     img: HollandBarrettLogo,
-    height: 25,
+    height: "25px",
   },
   {
     name: "Sky",
     img: SkyLogo,
-    height: 60,
+    height: "60px",
   },
   {
     name: "Coty",
     img: CotyLogo,
-    height: 35,
+    height: "35px",
   },
   {
     name: "Kaluza",
     img: KaluzaLogo,
-    height: 50,
+    height: "50px",
   },
 ];
 

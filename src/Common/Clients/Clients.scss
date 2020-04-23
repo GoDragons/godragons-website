@@ -5,16 +5,19 @@
   text-align: center;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  width: 100%;
+
   .title {
     width: 100%;
   }
+
   .clients-grid {
-    margin: 3rem;
-    img {
-      margin: 3rem;
-      @media (max-width: $sm) {
-        margin: 2rem;
-      }
+    margin-top: 3rem;
+
+    .column {
+      margin-bottom: 5rem;
+      display: flex;
+      justify-content: center;
     }
   }
 }
