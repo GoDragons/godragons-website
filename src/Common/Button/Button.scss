@@ -98,5 +98,6 @@ button {
     background-color: $gray;
     border: 1px solid $gray;
     color: $color1;
+    pointer-events: none;
   }
 }
