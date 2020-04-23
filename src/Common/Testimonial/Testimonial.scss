@@ -20,13 +20,13 @@
 
     .quote-start {
       left: -0.5rem;
-      top: -3.5rem;
+      top: 0rem;
     }
 
     .quote-end {
       transform: rotate(180deg);
       right: -0.5rem;
-      bottom: -4rem;
+      bottom: 0rem;
     }
   }
 
@@ -64,6 +64,12 @@
     width: 100%;
     margin-top: 3rem;
     text-align: center;
+
+    .inner-container {
+      background-color: $color1;
+      font-family: Poppins, Arial;
+      display: inline-block;
+    }
   }
 
   @media (max-width: $xs) {

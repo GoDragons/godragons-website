@@ -2,22 +2,19 @@
 
 .service-item {
   margin-top: 30px;
+  display: block;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1.2rem;
-  padding-top: 0;
-  min-height: 20rem;
+  padding: 1.5rem;
   position: relative;
+  background-color: transparent;
+  background-color: lighten($color3, 5);
 
-  @media (max-width: $lg) {
-    min-height: 24rem;
-  }
-
-  @media (max-width: $md) {
-    padding: 0rem 1.2rem;
-    padding-bottom: 3rem;
-    min-height: 17rem;
-  }
+  box-shadow: 10px 10px 30px darken($color3, 7),
+    -10px -10px 30px lighten($color3, 7);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 15.5rem;
 
   @media (max-width: $sm) {
     min-height: unset;
@@ -29,15 +26,31 @@
     color: $white;
     right: 10px;
     top: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: darken($color3, 2);
     height: 3rem;
     width: 3rem;
     text-align: center;
     line-height: 3rem;
     border-radius: 50%;
 
-    .svg-inline--fa {
+    .icon {
       transform: scale(1.2);
+      path {
+        fill: $white;
+      }
+    }
+  }
+  .learn-more {
+    margin-top: auto;
+    margin-bottom: 0;
+    color: $white;
+    text-align: center;
+    font-weight: 700;
+
+    .icon {
+      path {
+        fill: $white;
+      }
     }
   }
 
@@ -45,6 +58,9 @@
     font-family: Poppins, Arial;
     letter-spacing: -1px;
     width: 18rem;
+    color: $white;
+    margin: 0;
+    margin-top: -0.5rem;
 
     @media (max-width: $lg) {
       width: 12rem;
@@ -63,16 +79,12 @@
     }
   }
 
-  .description {
+  p.description {
     color: $white;
-    opacity: 0.6;
     letter-spacing: 0;
-
-    @media (max-width: $md) {
-      font-size: 1.1rem;
-      letter-spacing: -1px;
-      font-weight: 700;
-    }
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -1px;
   }
 
   a {
@@ -96,5 +108,20 @@
 
   .button-icon-right {
     margin-left: 10px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      $colorHover: $color4;
+      background-color: $colorHover;
+      border-color: $colorHover;
+
+      .description {
+        opacity: 1;
+      }
+      .icon-container {
+        background-color: darken($colorHover, 10);
+      }
+    }
   }
 }

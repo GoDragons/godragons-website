@@ -1,0 +1,18 @@
+@import "../variables";
+
+.services-grid {
+  margin-bottom: 2rem;
+
+  .actual-grid {
+    max-width: 900px;
+    margin: 0 auto !important;
+  }
+
+  .title {
+    color: $white;
+  }
+
+  .tagline {
+    color: $white;
+  }
+}

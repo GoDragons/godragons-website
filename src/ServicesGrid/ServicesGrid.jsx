@@ -16,13 +16,13 @@ export default function ServicesGrid() {
   ));
 
   return (
-    <>
+    <div className="services-grid">
       <Row align="center">
         <Col xl={4} lg={5}>
-          <h2>Our Services</h2>
+          <h2 className="title">Our Services</h2>
         </Col>
         <Col xl={8} lg={7}>
-          <h4>
+          <h4 className="tagline">
             From internal dashboards to real-time communication systems, we
             build reliable, bespoke software solutions.
           </h4>
@@ -32,7 +32,7 @@ export default function ServicesGrid() {
         <br />
         <br />
       </Hidden>
-      <Row>{columnElements}</Row>
-    </>
+      <Row className="actual-grid">{columnElements}</Row>
+    </div>
   );
 }

@@ -1,14 +1,16 @@
 @import "../variables";
 
 .page-home {
-  .tagline {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    font-weight: 900;
-    letter-spacing: -1px;
-    color: lighten($color3, 15);
-    line-height: 1.2;
+  .hero {
+    .tagline {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: lighten($color3, 15);
+      line-height: 1.2;
+    }
   }
 
   .segment {
@@ -72,14 +74,6 @@
 
       @media (max-width: $md) {
         padding: 2rem 0;
-      }
-
-      * {
-        color: $white;
-      }
-
-      p {
-        color: $white;
       }
     }
   }
