@@ -11,7 +11,7 @@ import TechImage from "../assets/godragons-tech-2.jpg";
 import IdeasImage from "../assets/godragons-ideas-2.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import blogData from "./blogData.json";
+import blogData from "./blogData";
 
 import "./Blog.scss";
 

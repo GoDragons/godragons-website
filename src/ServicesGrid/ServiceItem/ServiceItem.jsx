@@ -8,16 +8,16 @@ import "./ServiceItem.scss";
 
 function ServiceItem({ name, description, icon, slug }) {
   return (
-    <div className="service-item">
+    <Link className="service-item" to={`/services/${slug}`}>
       <h4 className="name">{name}</h4>
       <div className="icon-container">
-        <FontAwesomeIcon icon={icon} />
+        <FontAwesomeIcon icon={icon} className="icon" />
       </div>
       <p className="description">{description}</p>
-      <Link to={`/services/${slug}`}>
-        Learn more <FontAwesomeIcon icon="angle-right" />
-      </Link>
-    </div>
+      <p className="learn-more">
+        Learn More <FontAwesomeIcon icon="angle-right" className="icon" />
+      </p>
+    </Link>
   );
 }
 

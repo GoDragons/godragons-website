@@ -19,14 +19,14 @@
     }
 
     .quote-start {
-      transform: rotate(180deg);
       left: -0.5rem;
-      top: -3.5rem;
+      top: 0rem;
     }
 
     .quote-end {
+      transform: rotate(180deg);
       right: -0.5rem;
-      bottom: -4rem;
+      bottom: 0rem;
     }
   }
 
