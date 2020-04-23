@@ -1,10 +1,10 @@
 import ShellLogo from "../assets/logo-shell.svg";
 import HollandBarrettLogo from "../assets/logo-holland-and-barrett.svg";
-import SkyLogo from "../assets/logo-sky.svg";
+import SkyLogo from "../assets/logo-sky.png";
 import KaluzaLogo from "../assets/logo-kaluza.png";
 import CotyLogo from "../assets/logo-coty.jpg";
 
-export const clientsData = [
+const clientsData = [
   {
     name: "Shell",
     img: ShellLogo,
@@ -31,3 +31,5 @@ export const clientsData = [
     height: 50,
   },
 ];
+
+export default clientsData;
