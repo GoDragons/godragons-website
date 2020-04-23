@@ -18,12 +18,12 @@ const clientsData = [
   {
     name: "Sky",
     img: SkyLogo,
-    height: 50,
+    height: 60,
   },
   {
     name: "Coty",
     img: CotyLogo,
-    height: 40,
+    height: 35,
   },
   {
     name: "Kaluza",
