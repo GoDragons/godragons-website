@@ -9,10 +9,11 @@ function Button({ label, onClick, type, className, inline }) {
   const computedClassName = cx("button", className, {
     primary: type === "primary",
     secondary: type === "secondary",
-    inline
+    disabled: type === "disabled",
+    inline,
   });
   const buttonProps = {
-    className: computedClassName
+    className: computedClassName,
   };
 
   if (onClick && type !== "disabled") {
@@ -25,7 +26,7 @@ function Button({ label, onClick, type, className, inline }) {
 Button.defaultProps = {
   type: "disabled",
   label: "CHANGE ME",
-  inline: false
+  inline: false,
 };
 
 Button.propTypes = {
@@ -33,7 +34,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(["primary", "secondary", "disabled"]),
   onClick: PropTypes.func,
   className: PropTypes.string,
-  inline: PropTypes.bool
+  inline: PropTypes.bool,
 };
 
 export default Button;

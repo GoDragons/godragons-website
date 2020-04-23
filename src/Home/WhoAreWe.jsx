@@ -1,7 +1,6 @@
 import React from "react";
 
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
-import { Link } from "react-router-dom";
 import { Row, Col, Hidden } from "react-grid-system";
 import Ideation from "../assets/godragons-building-blocks.png";
 import Button from "../Common/Button/Button";

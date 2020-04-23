@@ -14,6 +14,9 @@ function Contact() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isMessageSubmittedShowing, setIsMessageSubmittedShowing] = useState(
+    false
+  );
 
   function submitForm(e) {
     e.preventDefault();
@@ -31,6 +34,12 @@ function Contact() {
       method: "POST",
       url: "https://xfngqz4xu3.execute-api.eu-west-2.amazonaws.com/dev/contact",
       data: [requestBody],
+    }).finally(() => {
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setMessage("");
+      setIsMessageSubmittedShowing(true);
     });
   }
 
@@ -76,7 +85,15 @@ function Contact() {
                 />
               </div>
               <div className="button-container">
-                <Button type="secondary" label="SUBMIT" />
+                <Button
+                  type={isMessageSubmittedShowing ? "disabled" : "secondary"}
+                  disabled={isMessageSubmittedShowing}
+                  label={
+                    isMessageSubmittedShowing
+                      ? "Your message has been sent"
+                      : "SUBMIT"
+                  }
+                />
               </div>
             </div>
           </form>
