@@ -1,4 +1,5 @@
 import React from "react";
+import { Row, Col } from "react-grid-system";
 
 import BoxedLayout from "../BoxedLayout/BoxedLayout";
 import { clientsData as clients } from "../../Data/clientsData";
@@ -8,17 +9,17 @@ import "./Clients.scss";
 export default function Testimonial() {
   const displayClients = clients.map((aClient, index) => {
     return (
-      <React.Fragment key={index} >
+      <Col lg={4} md={6} sm={12} key={index}>
         <img alt={aClient.name} src={aClient.img} height={aClient.height}></img>
-      </React.Fragment>
-    )
+      </Col>
+    );
   });
 
   return (
     <div className="clients">
       <BoxedLayout>
         <h2 className="title">Some of our clients</h2>
-        <div className="client-logos">{displayClients}</div>
+        <Row className="clients-grid">{displayClients}</Row>
       </BoxedLayout>
     </div>
   );

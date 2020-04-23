@@ -22,8 +22,8 @@ function Home() {
   return (
     <div className="page-home">
       <Hero />
-      <Testimonial {...hiitTribeTestimonial} />
       <Clients />
+      <Testimonial {...hiitTribeTestimonial} />
       <WhoAreWe />
 
       <div className="purple segment services">
