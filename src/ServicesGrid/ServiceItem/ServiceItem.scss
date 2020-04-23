@@ -80,7 +80,6 @@
   }
 
   p.description {
-    // color: saturate(lighten($color3, 35), 70);
     color: $white;
     letter-spacing: 0;
     font-size: 1.1rem;
@@ -113,13 +112,9 @@
 
   @media (hover: hover) {
     &:hover {
-      // $colorHover: saturate(lighten($color3, 10), 25);
       $colorHover: $color4;
       background-color: $colorHover;
       border-color: $colorHover;
-
-      // box-shadow: 10px 10px 30px darken($color4, 7),
-      //   -10px -10px 30px lighten($color4, 7);
 
       .description {
         opacity: 1;
