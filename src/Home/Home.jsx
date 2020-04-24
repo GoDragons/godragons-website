@@ -7,6 +7,7 @@ import ServicesGrid from "../ServicesGrid/ServicesGrid";
 import Thumbnail from "../Common/Thumbnail/Thumbnail";
 import PageTitle from "../Common/PageTitle/PageTitle";
 import Testimonial from "../Common/Testimonial/Testimonial";
+import Clients from "../Common/Clients/Clients";
 
 import GymPhoto from "../assets/godragons-gym-4.jpg";
 
@@ -21,6 +22,7 @@ function Home() {
   return (
     <div className="page-home">
       <Hero />
+      <Clients />
       <Testimonial {...hiitTribeTestimonial} />
       <WhoAreWe />
 
