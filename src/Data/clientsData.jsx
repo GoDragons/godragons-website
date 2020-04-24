@@ -1,4 +1,4 @@
-import ShellLogo from "../assets/logo-shell.jpg";
+import ShellLogo from "../assets/logo-shell.png";
 import HollandBarrettLogo from "../assets/logo-holland-and-barrett.svg";
 import SkyLogo from "../assets/logo-sky.png";
 import KaluzaLogo from "../assets/logo-kaluza.png";
@@ -11,15 +11,16 @@ const clientsData = [
     height: "50px",
   },
   {
+    name: "Sky",
+    img: SkyLogo,
+    height: "80px",
+  },
+  {
     name: "Holland & Barrett",
     img: HollandBarrettLogo,
     height: "25px",
   },
-  {
-    name: "Sky",
-    img: SkyLogo,
-    height: "60px",
-  },
+
   {
     name: "Coty",
     img: CotyLogo,

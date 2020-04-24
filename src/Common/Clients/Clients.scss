@@ -19,6 +19,15 @@
       margin-bottom: 5rem;
       display: flex;
       justify-content: center;
+
+      .logo-sky {
+        position: relative;
+        top: 7px;
+      }
+      .logo-holland-barrett {
+        position: relative;
+        top: 5px;
+      }
     }
   }
 }

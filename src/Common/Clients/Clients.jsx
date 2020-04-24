@@ -8,9 +8,22 @@ import "./Clients.scss";
 
 export default function Testimonial() {
   const displayClients = clientsData.map((client, index) => {
+    const className = client.name
+      .split("&")
+      .join("")
+      .split("  ")
+      .join(" ")
+      .split(" ")
+      .join("-")
+      .toLowerCase();
     return (
       <Col md={4} sm={6} xs={12} key={index} className="column">
-        <img alt={client.name} src={client.img} height={client.height}></img>
+        <img
+          className={`logo-${className}`}
+          alt={client.name}
+          src={client.img}
+          height={client.height}
+        ></img>
       </Col>
     );
   });
@@ -19,9 +32,9 @@ export default function Testimonial() {
     <div className="clients">
       <BoxedLayout>
         <h2 className="title">Some of our clients</h2>
-        <Row className="clients-grid" align="center">
-          {displayClients}
-        </Row>
+        <div className="clients-grid">
+          <Row align="center">{displayClients}</Row>
+        </div>
       </BoxedLayout>
     </div>
   );
