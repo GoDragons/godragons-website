@@ -1,4 +1,4 @@
-import ShellLogo from "../assets/logo-shell.svg";
+import ShellLogo from "../assets/logo-shell.jpg";
 import HollandBarrettLogo from "../assets/logo-holland-and-barrett.svg";
 import SkyLogo from "../assets/logo-sky.png";
 import KaluzaLogo from "../assets/logo-kaluza.png";
