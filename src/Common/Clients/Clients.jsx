@@ -9,7 +9,7 @@ import "./Clients.scss";
 export default function Testimonial() {
   const displayClients = clientsData.map((client, index) => {
     return (
-      <Col md={4} sm={6} xs={12} key={index}>
+      <Col md={4} sm={6} xs={12} key={index} className="column">
         <img alt={client.name} src={client.img} height={client.height}></img>
       </Col>
     );
