@@ -65,7 +65,7 @@ function IndividualService({ service }) {
               />
             </Col>
             <Hidden xs sm>
-              <Col md={5}>
+              <Col md={5} className="illustration-container">
                 <img
                   src={service.illustration}
                   className="service-illustration"

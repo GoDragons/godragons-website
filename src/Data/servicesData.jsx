@@ -1,10 +1,11 @@
 import LogoDragon from "../assets/godragons_logo_dragon_only_square.png";
 
-import IdeationIllustration from "../assets/godragons-ideation.png";
+import IdeationIllustration from "../assets/godragons-ideation-2.png";
 import PrototypingIllustration from "../assets/godragons-prototyping.jpg";
 import SoftwareDevelopmentIllustration from "../assets/godragons-software-development.png";
 import SystemDesignIllustration from "../assets/godragons-system-design.png";
 import GymPhoto from "../assets/godragons-gym-4.jpg";
+import SystemsIntegrationIllustration from "../assets/godragons-systems-integration-wheel-model.jpg";
 
 const servicesData = [
   {
@@ -137,6 +138,65 @@ const servicesData = [
           line1: "50%",
           line2: "discount",
         },
+      },
+    ],
+  },
+  {
+    name: "Systems integration",
+    slug: "systems-integration",
+    icon: "laptop-code",
+    description:
+      "Build web and native apps, backend systems and entire platforms.",
+    paragraphs: [
+      "GoDragons offers full software development services, from building web and native apps to backend systems and entire platforms.",
+      "We have a strong focus on delivering high quality and reliable software, on time.",
+    ],
+    bulletPoints: [
+      "Our team builds self-healing and scalable microservices and serverless cloud native applications.",
+      "We use modern practices including automated testing and continuous deployment.",
+      "Our main programming languages are Go (golang), JavaScript (React and node), and Python.",
+    ],
+    illustration: SystemsIntegrationIllustration,
+    pricing: [
+      {
+        name: "Small",
+        list: [
+          "Up to 3 months",
+          "Includes ideation process",
+          "Demo every 1-2 weeks",
+          "Up to 3 milestones",
+        ],
+        price: "£10k-£20k",
+        priceFrequency: null,
+        image: LogoDragon,
+      },
+      {
+        name: "Regular",
+        list: [
+          "3 months",
+          "Includes static prototype",
+          "Includes ideation process",
+          "Dedicated team",
+          "Demo every 2 weeks",
+          "Milestone every month",
+        ],
+        price: "£40k-£60k",
+        priceFrequency: null,
+        image: LogoDragon,
+      },
+      {
+        name: "Large",
+        list: [
+          "6 months",
+          "Includes dynamic prototype",
+          "Includes ideation process",
+          "Dedicated team",
+          "Demo every 2 weeks",
+          "Milestone every month",
+        ],
+        price: "£80k-£120k",
+        priceFrequency: null,
+        image: LogoDragon,
       },
     ],
   },
