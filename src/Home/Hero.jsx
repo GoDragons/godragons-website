@@ -19,7 +19,7 @@ export default function Hero() {
               Node.js and Go
             </p>
             <Link to="/contact">
-              <Button type="primary" label="Get in touch" />
+              <Button type="primary" label="Book a free consultation" />
             </Link>
           </Col>
           <Hidden sm xs>
