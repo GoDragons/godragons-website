@@ -16,6 +16,7 @@ import Footer from "../Footer/Footer";
 import Blog from "../Blog/Blog";
 import BlogPostSyncApps from "../Blog/BlogPostSyncApps/BlogPostSyncApps";
 import CaseStudyHiitTribe from "../CaseStudies/CaseStudyHiitTribe/CaseStudyHiitTribe";
+import PrivacyPolicy from "../PrivacyPolicy/PrivacyPolicy";
 
 import ScrollToTop from "../Common/ScrollToTop/ScrollToTop";
 
@@ -50,6 +51,9 @@ function App() {
           </Route>
           <Route exact path="/case-studies/hiit-tribe">
             <CaseStudyHiitTribe />
+          </Route>
+          <Route exact path="/privacy-policy">
+            <PrivacyPolicy />
           </Route>
           {servicesData.map((service, index) => {
             return (
