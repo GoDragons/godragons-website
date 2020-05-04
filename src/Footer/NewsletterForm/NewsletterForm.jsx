@@ -24,12 +24,12 @@ function NewsletterForm() {
     axios({
       method: "POST",
       url: "https://xfngqz4xu3.execute-api.eu-west-2.amazonaws.com/dev/contact",
-      data: [requestBody]
+      data: [requestBody],
     })
       .then(() => {
         setFormSuccess(true);
       })
-      .catch(error => {
+      .catch((error) => {
         setFormSuccess(true);
       });
   }
@@ -46,9 +46,9 @@ function NewsletterForm() {
       <h2 className="title">Stay in the loop</h2>
       <input
         value={email}
-        onChange={e => setEmail(e.target.value)}
+        onChange={(e) => setEmail(e.target.value)}
         placeholder="Insert your email"
-        onClick={e => setFormSuccess()}
+        onClick={(e) => setFormSuccess()}
       />
 
       <Button type="primary" label={buttonLabel} onClick={submitForm} />

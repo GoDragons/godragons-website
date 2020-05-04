@@ -5,15 +5,40 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
 import Button from "../Common/Button/Button";
 
+import Checkbox from "./Checkbox/Checkbox";
+import Modal from "./Modal/Modal";
+
 import axios from "axios";
+import _ from "lodash";
 
 import "./Contact.scss";
 
-function Contact() {
+function Contact(props) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  function validateEmail() {
+    console.log("validateEmail");
+    // call lambda, then put the response in state
+    realCall();
+  }
+
+  function realCall() {
+    axios.get("http://www.google.com");
+    console.log("real call");
+  }
+
+  const debounced = _.debounce(validateEmail, 1000);
+
+  function onEmailChange(e) {
+    setEmail(e.target.value);
+    debounced();
+  }
 
   function submitForm(e) {
     e.preventDefault();
@@ -32,6 +57,38 @@ function Contact() {
       url: "https://xfngqz4xu3.execute-api.eu-west-2.amazonaws.com/dev/contact",
       data: [requestBody],
     });
+  }
+
+  function openModal() {
+    setModalOpen(true);
+  }
+
+  function hideModal() {
+    setModalOpen(false);
+  }
+
+  function displayModal() {
+    if (!isModalOpen) {
+      return null;
+    }
+
+    return (
+      <Modal onClose={hideModal}>
+        <div className="description"></div>
+      </Modal>
+    );
+  }
+
+  function isFormValid() {
+    if (!isPrivacyChecked) {
+      return false;
+    }
+
+    if (!isEmailValid) {
+      return false;
+    }
+
+    return true;
   }
 
   return (
@@ -65,7 +122,7 @@ function Contact() {
                 <input
                   placeholder="Email address*"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={onEmailChange}
                 />
               </div>
               <div className="input-group message-content">
@@ -75,8 +132,25 @@ function Contact() {
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
+              <div className="privacy-policy-container">
+                <Checkbox
+                  checked={isPrivacyChecked}
+                  onCheck={(e, newValue) => setIsPrivacyChecked(newValue)}
+                  label={
+                    <span>
+                      I understand and agree with the{" "}
+                      <a onClick={openModal}>Privacy Policy</a>
+                    </span>
+                  }
+                />
+
+                <div className="modal-placeholder">{displayModal()}</div>
+              </div>
               <div className="button-container">
-                <Button type="secondary" label="SUBMIT" />
+                <Button
+                  type={isFormValid() ? "secondary" : "disabled"}
+                  label="SUBMIT"
+                />
               </div>
             </div>
           </form>
