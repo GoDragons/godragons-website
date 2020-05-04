@@ -1,0 +1,20 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:eu-west-2:994541973446:stack/godragons-website-api/3882fca0-8e14-11ea-8cd7-069b836e2b40",
+            "StackName": "godragons-website-api",
+            "Description": "API for an online collaboration tool used to build system design diagrams",
+            "CreationTime": "2020-05-04T14:33:28.745Z",
+            "LastUpdatedTime": "2020-05-04T15:14:59.138Z",
+            "RollbackConfiguration": {},
+            "StackStatus": "UPDATE_ROLLBACK_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_NAMED_IAM"
+            ],
+            "Tags": [],
+            "EnableTerminationProtection": false
+        }
+    ]
+}

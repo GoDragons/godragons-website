@@ -1,6 +1,6 @@
 import React from "react";
 
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import "./Footer.scss";
 import FooterWidget from "./FooterWidget/FooterWidget";
@@ -20,6 +20,9 @@ function Footer() {
           <p>24 Southwark St</p>
           <p>London SE1 1TY</p>
         </FooterWidget>
+        <Link to="/privacy-policy">
+          <FooterWidget title="PRIVACY POLICY"></FooterWidget>
+        </Link>
       </BoxedLayout>
     </footer>
   );
