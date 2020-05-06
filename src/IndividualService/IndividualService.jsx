@@ -1,6 +1,6 @@
 import React from "react";
 
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Row, Col, Hidden } from "react-grid-system";
 
 import PricingTable from "../Common/PricingTable/PricingTable";
@@ -48,21 +48,28 @@ function IndividualService({ service }) {
     );
   }
 
+  const pageTitleProps = {
+    value: service.name,
+  };
+  if (service.tagline) {
+    pageTitleProps.tagline = service.tagline;
+  }
   return (
     <div className="service-page prototyping-page">
-      <PageTitle value={service.name} />
+      <PageTitle {...pageTitleProps} />
       <div className="service-info">
         <BoxedLayout>
           <Row align="center">
             <Col md={7}>
               {displayParagraphs()}
               <List items={service.bulletPoints} icon="asterisk" />
-              <Button
-                type="secondary"
-                label="See prices"
-                className="see-prices-button"
-                onClick={scrollToPricing}
-              />
+              <Link to="/contact">
+                <Button
+                  type="secondary"
+                  label="Book a free consultation"
+                  className="see-prices-button"
+                />
+              </Link>
             </Col>
             <Hidden xs sm>
               <Col md={5}>

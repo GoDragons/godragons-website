@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import cx from "classnames";
 
 import List from "../List/List";
-import PageTitle from "../PageTitle/PageTitle";
+// import PageTitle from "../PageTitle/PageTitle";
 import DiscountTag from "../DiscountTag/DiscountTag";
 
 function PricingTable({ items }) {
@@ -57,7 +57,7 @@ function PricingTable({ items }) {
     }
     return items.map((item, index) => (
       <li className="item" key={index}>
-        {displayDiscountTag(item)}
+        {/* {displayDiscountTag(item)} */}
         <div className="icon-container ">
           {item.icon ? (
             <FontAwesomeIcon
@@ -72,7 +72,7 @@ function PricingTable({ items }) {
         </div>
         <h5 className="name">{item.name}</h5>
         <List items={item.list} />
-        {displayPrice(item)}
+        {/* {displayPrice(item)} */}
       </li>
     ));
   }
@@ -81,7 +81,7 @@ function PricingTable({ items }) {
 
   return (
     <div className="pricing-table-container">
-      <PageTitle value="Pricing" color="light" />
+      {/* <PageTitle value="Pricing" color="light" /> */}
       <ul className={className}>{displayItems()}</ul>
     </div>
   );
