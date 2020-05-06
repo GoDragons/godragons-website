@@ -9,13 +9,13 @@ import GymPhoto from "../assets/godragons-gym-4.jpg";
 const servicesData = [
   {
     name: "Ideation",
+    tagline: "Turn your vision into a plan of action.",
     slug: "ideation",
     icon: "lightbulb",
-    description: "Working with you to envision software solutions to problems.",
+    description: "Turn your vision into a plan of action.",
     illustration: IdeationIllustration,
     paragraphs: [
-      "GoDragons can help you come up with a concrete plan of action.",
-      "Together we distill the problem and identify the best approach to solve it. Finally, we envision solutions that can turn your ideas into a reality.",
+      "Together we distill the problem and identify the best approach to solve it. Then we envision solutions to make it a reality.",
     ],
     bulletPoints: [
       "We offer structured, 4-hour workshops. (Remotely, due to the coronavirus pandemic)",
@@ -44,6 +44,7 @@ const servicesData = [
   },
   {
     name: "Prototyping",
+    tagline: "Building the wrong thing is expensive.",
     slug: "prototyping",
     icon: "pencil-ruler",
     description:
@@ -100,11 +101,13 @@ const servicesData = [
   },
   {
     name: "Software development",
+    tagline: "We agree on an a project price and you never pay extra.",
     slug: "software-development",
     icon: "laptop-code",
     description:
-      "Build web and native apps, backend systems and entire platforms.",
+      "We agree on an a project price and you never pay extra. Build web and native apps, backend systems and entire platforms.",
     paragraphs: [
+      "We offer a free consultation, during which we work to understand what you need. Then we give you a quote based on the agreed-upon features and milestones.",
       "GoDragons offers full software development services, from building web and native apps to backend systems and entire platforms.",
       "We have a strong focus on delivering high quality and reliable software, on time.",
     ],

@@ -48,9 +48,15 @@ function IndividualService({ service }) {
     );
   }
 
+  const pageTitleProps = {
+    value: service.name,
+  };
+  if (service.tagline) {
+    pageTitleProps.tagline = service.tagline;
+  }
   return (
     <div className="service-page prototyping-page">
-      <PageTitle value={service.name} />
+      <PageTitle {...pageTitleProps} />
       <div className="service-info">
         <BoxedLayout>
           <Row align="center">
