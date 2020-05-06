@@ -14,13 +14,6 @@ import BoxedLayout from "../Common/BoxedLayout/BoxedLayout";
 import "./IndividualService.scss";
 
 function IndividualService({ service }) {
-  function scrollToPricing() {
-    document.querySelector(".pricing-table-container").scrollIntoView({
-      behavior: "smooth", // smooth scroll
-      block: "start", // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
-    });
-  }
-
   function displayParagraphs() {
     if (!service.paragraphs) {
       return null;
