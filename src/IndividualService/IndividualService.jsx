@@ -1,6 +1,6 @@
 import React from "react";
 
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Row, Col, Hidden } from "react-grid-system";
 
 import PricingTable from "../Common/PricingTable/PricingTable";
@@ -63,12 +63,13 @@ function IndividualService({ service }) {
             <Col md={7}>
               {displayParagraphs()}
               <List items={service.bulletPoints} icon="asterisk" />
-              <Button
-                type="secondary"
-                label="See prices"
-                className="see-prices-button"
-                onClick={scrollToPricing}
-              />
+              <Link to="/contact">
+                <Button
+                  type="secondary"
+                  label="Book a free consultation"
+                  className="see-prices-button"
+                />
+              </Link>
             </Col>
             <Hidden xs sm>
               <Col md={5}>
